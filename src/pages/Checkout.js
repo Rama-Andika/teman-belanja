@@ -26,7 +26,7 @@ const Checkout = () => {
             </div>
 
             <div className="">
-              <div className="mt-10 mb-10 font-roboto bg-[#8ecae6] text-white p-8">
+              <div className="mt-10 mb-10 font-roboto bg-[#fa5a96] text-white p-8">
                 <div className="mb-2 flex gap-2 items-center font-semibold ">
                   <div>
                     <MdLocationPin />
@@ -132,7 +132,7 @@ const Checkout = () => {
             </div>
           </div>
           <div className=" mt-10">
-            <div className="flex flex-col max-[528px]:items-end justify-end items-end w-full bg-[#8ecae6] p-5 text-white text-[12px] font-semibold">
+            <div className="flex flex-col max-[528px]:items-end justify-end items-end w-full bg-[#fa5a96] p-5 text-white text-[12px] font-semibold">
               <div className="flex gap-5">
                 <div className="">Sub Total</div>
                 <div className="">:</div>

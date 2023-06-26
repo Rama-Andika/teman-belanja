@@ -188,7 +188,7 @@ const Keranjang = () => {
             </div>
           </div>
           <div className=" mt-10 sticky bottom-0 ">
-            <div className="flex max-[528px]:flex-col max-[528px]:items-end justify-end items-center gap-5 w-full bg-[#8ecae6] p-10 text-white font-bold">
+            <div className="flex max-[528px]:flex-col max-[528px]:items-end justify-end items-center gap-5 w-full bg-[#fa5a96] p-10 text-white font-bold">
               <div className="flex gap-5">
                 <div className="">Total</div>
                 <div className="">:</div>
