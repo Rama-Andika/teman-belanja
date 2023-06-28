@@ -24,7 +24,6 @@ import { RiArrowLeftSLine } from "react-icons/ri";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const CategoryComponent = () => {
-  const array = [1];
   const arrowStyles = {
     position: "absolute",
     zIndex: 2,
@@ -55,7 +54,7 @@ const CategoryComponent = () => {
                 style={{ ...arrowStyles }}
                 className="left-0 rounded-full shadow-xl bg-white w-[30px] h-[30px] group-hover:w-[50px] group-hover:h-[50px]"
               >
-                <RiArrowLeftSLine className="text-center text-slate-500 group-hover:text-[50px]"/>
+                <RiArrowLeftSLine className="text-center text-slate-500 group-hover:text-[50px]" />
               </button>
             )
           }
@@ -68,7 +67,7 @@ const CategoryComponent = () => {
                 style={{ ...arrowStyles }}
                 className="right-0 rounded-full shadow-xl bg-white w-[30px] h-[30px] group-hover:w-[50px] group-hover:h-[50px]"
               >
-                <RiArrowRightSLine className="text-center text-slate-500 group-hover:text-[50px]"/>
+                <RiArrowRightSLine className="text-center text-slate-500 group-hover:text-[50px]" />
               </button>
             )
           }
