@@ -9,7 +9,6 @@ const ProductComponent = () => {
   const array = [1, 2, 3];
   const arrayCategory = [1, 2, 3, 4, 5, 6];
 
-  console.log(array);
   return (
     <>
       <div className="mt-5 py-4 text-center text-[#fa5a96] bg-white border-b-4 border-[#fa5a96]">
@@ -42,7 +41,9 @@ const ProductComponent = () => {
                           <div className="whitespace-nowrap overflow-ellipsis overflow-hidden text-[16px]">
                             Rp.10.000.000
                           </div>
-                          <div className="text-[12px] text-slate-500 whitespace-nowrap">10RB Terjual</div>
+                          <div className="text-[12px] text-slate-500 whitespace-nowrap">
+                            10RB Terjual
+                          </div>
                         </div>
                       </div>
                     </div>

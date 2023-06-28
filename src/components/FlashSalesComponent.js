@@ -33,6 +33,7 @@ const FlashSalesComponent = () => {
 
   useEffect(() => {
     const savedDate = getLocalStorageValue("end_date");
+    console.log(getLocalStorageValue("end_date"));
     if (savedDate != null && !isNaN(savedDate)) {
       const currentTime = Date.now();
       const delta = parseInt(savedDate, 10) - currentTime;
