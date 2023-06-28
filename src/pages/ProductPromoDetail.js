@@ -75,7 +75,7 @@ const ProductPromoDetail = () => {
             </div>
             <div className="flex flex-col justify-between text-[10px] min-[768px]:text-lg">
               <div className="flex flex-col gap-4">
-                <div>
+                <div className="w-full overflow-ellipsis overflow-hidden">
                   <p className="text-[22px]">Nescafe Coffee</p>
                 </div>
                 <div className="text-[24px] text-center flex flex-col items-start">
@@ -84,7 +84,7 @@ const ProductPromoDetail = () => {
                       <p>Rp.9.000.000</p>
                     </div>
                     <div className="">
-                      <hr className="bg-slate-400 h-1 mt-[-16px]" />
+                      <hr className="bg-slate-400 h-1 min-[766px]:mt-[-16px] mt-[-20px]" />
                     </div>
                   </div>
                   <div className="mt-2 text-[#fa5a96]">Rp.10.000.000</div>
@@ -158,7 +158,7 @@ const ProductPromoDetail = () => {
           </div>
 
           <div className="pt-9">
-            <p className="ont-roboto text-lg font-bold">Deskripsi Produk</p>
+            <p className="font-roboto text-lg font-bold">Deskripsi Produk</p>
             <div className="mt-5">
               Irure proident laboris duis amet aliqua Lorem consectetur eiusmod
               eu. Enim adipisicing dolor ipsum ut ipsum. Eiusmod sit minim

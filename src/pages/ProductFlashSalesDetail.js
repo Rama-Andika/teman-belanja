@@ -4,7 +4,7 @@ import { SlBasket } from "react-icons/sl";
 import NavbarComponent from "../components/NavbarComponent";
 import ReactImageGallery from "react-image-gallery";
 import { BsFillLightningFill } from "react-icons/bs";
-import Countdown from "react-countdown";
+import Countdown, { zeroPad } from "react-countdown";
 import { Rating } from "react-simple-star-rating";
 import { useNavigate } from "react-router-dom";
 
@@ -64,7 +64,19 @@ const ProductFlashSalesDetail = () => {
   );
   const wantedDelay = 86400000;
 
-  console.log(getLocalStorageValue);
+  const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a complete state
+      return <span>Timer end</span>;
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+        </span>
+      );
+    }
+  };
 
   useEffect(() => {
     const savedDate = getLocalStorageValue("end_date");
@@ -96,8 +108,9 @@ const ProductFlashSalesDetail = () => {
               </div>
               <div className="font-bold max-[252px]:text-[10px] max-[501px]:text-xs min-[760px]:text-xl">
                 <Countdown
-                  daysInHours={true}
                   date={data.date + data.delay}
+                  renderer={renderer}
+                  zeroPadTime={2}
                   onStart={(delta) => {
                     //Save the end date
                     if (localStorage.getItem("end_date") == null)
@@ -126,7 +139,7 @@ const ProductFlashSalesDetail = () => {
             </div>
             <div className="flex flex-col justify-between text-[10px] min-[768px]:text-lg">
               <div className="flex flex-col gap-4">
-                <div>
+                <div className="w-full overflow-ellipsis overflow-hidden">
                   <p className="font-roboto text-[22px]">Nescafe Coffee</p>
                 </div>
                 <div className="text-[24px] text-[#fa5a96] font-roboto">
@@ -197,7 +210,7 @@ const ProductFlashSalesDetail = () => {
           </div>
 
           <div className="pt-9">
-            <p className="ont-roboto text-lg font-bold">Deskripsi Produk</p>
+            <p className="font-roboto text-lg font-bold">Deskripsi Produk</p>
             <div className="mt-5">
               Irure proident laboris duis amet aliqua Lorem consectetur eiusmod
               eu. Enim adipisicing dolor ipsum ut ipsum. Eiusmod sit minim

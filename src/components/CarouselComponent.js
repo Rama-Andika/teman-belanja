@@ -1,10 +1,10 @@
 import { Carousel } from "react-responsive-carousel";
 
 
-export default function CarouselComponent({showArrows, autoPlay, infiniteLoop, showIndicators, verticalSwipe, children}) {
+export default function CarouselComponent({width,showArrows, autoPlay, infiniteLoop, showIndicators, verticalSwipe, className, children}) {
   return (
     <div className="">
-      <Carousel preventMovementUntilSwipeScrollTolerance={true} swipeScrollTolerance={50} verticalSwipe={verticalSwipe} showArrows={showArrows} showThumbs={false} showStatus={false} autoPlay={autoPlay} infiniteLoop={infiniteLoop} showIndicators={showIndicators} >
+      <Carousel width={width} preventMovementUntilSwipeScrollTolerance={true} swipeScrollTolerance={50} verticalSwipe={verticalSwipe} showArrows={showArrows} showThumbs={false} showStatus={false} autoPlay={autoPlay} infiniteLoop={infiniteLoop} showIndicators={showIndicators} className={className}>
         {children}
       </Carousel>
     </div>

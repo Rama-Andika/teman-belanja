@@ -91,7 +91,16 @@ const NavbarComponent = ({ children }) => {
 
             <div className="flex md:order-2 gap-2">
               <div className="text-xl max-[768px]:mt-2">
-                <SlBasket />
+                <div className="relative max-[768px]:me-5">
+                  <Link to="/keranjang">
+                    <div>
+                      <SlBasket />
+                    </div>
+                    <div className="absolute flex items-center justify-center text-[14px] top-[-15px] right-[-25px] bg-white text-[#fa5a96] rounded-full w-7 h-7 p-1 overflow-ellipsis overflow-hidden">
+                      2
+                    </div>
+                  </Link>
+                </div>
               </div>
               <Navbar.Toggle />
             </div>

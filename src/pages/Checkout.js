@@ -21,9 +21,7 @@ const Checkout = () => {
       <div className="min-[750px]:min-h-screen min-[750px]:relative">
         <NavbarComponent>
           <div className="pt-5">
-            <div className="font-roboto text-xl mb-3">
-              Checkout
-            </div>
+            <div className="font-roboto text-xl mb-3">Checkout</div>
 
             <div className="">
               <div className="mt-10 mb-10 font-roboto bg-[#fa5a96] text-white p-8">
@@ -90,7 +88,9 @@ const Checkout = () => {
                       <img alt={unsplashimg.alt} src={unsplashimg.src} />
                     </div>
                     <div className="flex flex-col font-roboto">
-                      <div>Nescafe Coffe</div>
+                      <div className="w-full overflow-ellipsis overflow-hidden">
+                        Nescafe Coffee
+                      </div>
                       <div className="text-[#219ebc]">
                         Rp.{numberWithCommas(nominal)}
                       </div>
@@ -112,7 +112,9 @@ const Checkout = () => {
                       <img alt={unsplashimg.alt} src={unsplashimg.src} />
                     </div>
                     <div className="flex flex-col font-roboto">
-                      <div>Nescafe Coffe</div>
+                      <div className="w-full overflow-ellipsis overflow-hidden">
+                        Nescafe Coffe
+                      </div>
                       <div className="text-[#219ebc]">
                         Rp.{numberWithCommas(nominal)}
                       </div>

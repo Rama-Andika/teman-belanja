@@ -110,7 +110,10 @@ const Keranjang = () => {
                       <img alt={unsplashimg.alt} src={unsplashimg.src} />
                     </div>
                     <div className="flex flex-col font-roboto">
-                      <div>Nescafe Coffe</div>
+                      <div className="w-full overflow-ellipsis overflow-hidden">
+                        Nescafe
+                        Coffeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                      </div>
                       <div className="text-[#219ebc]">
                         Rp.{numberWithCommas(nominal)}
                       </div>
@@ -150,7 +153,9 @@ const Keranjang = () => {
                       <img alt={unsplashimg.alt} src={unsplashimg.src} />
                     </div>
                     <div className="flex flex-col font-roboto">
-                      <div>Nescafe Coffe</div>
+                      <div className="w-full overflow-ellipsis overflow-hidden">
+                        Nescafe Coffe
+                      </div>
                       <div className="text-[#219ebc]">
                         Rp.{numberWithCommas(nominal)}
                       </div>

@@ -71,7 +71,7 @@ const ProductDetail = () => {
             </div>
             <div className="flex flex-col justify-between text-[10px] min-[768px]:text-lg ">
               <div className="flex flex-col gap-4">
-                <div>
+                <div className="w-full overflow-ellipsis overflow-hidden">
                   <p className="font-roboto text-[22px]">Nescafe Coffee</p>
                 </div>
                 <div className="text-[24px] text-[#fa5a96] font-roboto">

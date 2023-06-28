@@ -1,7 +1,7 @@
 import CarouselComponent from "./CarouselComponent";
 import { BsFillLightningFill } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
-import Countdown from "react-countdown";
+import Countdown, { zeroPad } from "react-countdown";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -14,12 +14,22 @@ const FlashSalesComponent = () => {
   const arrayCategory = [1, 2, 3, 4, 5, 6];
   const getLocalStorageValue = (s) => localStorage.getItem(s);
 
-  const [data, setData] = useState(
-    { date: Date.now(), delay: 86400000 } 
-  );
-  const wantedDelay = 86400000;
+  const [data, setData] = useState({ date: Date.now(), delay: 1000000 });
+  const wantedDelay = 1000000;
 
-  console.log(getLocalStorageValue);
+  const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a complete state
+      return <span>Timer end</span>;
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+        </span>
+      );
+    }
+  };
 
   useEffect(() => {
     const savedDate = getLocalStorageValue("end_date");
@@ -41,15 +51,16 @@ const FlashSalesComponent = () => {
   return (
     <div className="mt-5 border bg-white rounded-sm p-5">
       <div className="flex justify-between">
-        <div className="flex gap-2 items-cente mb-3">
+        <div className="flex gap-2 items-cente mb-3 ">
           <div className="font-roboto max-[252px]:text-[10px] max-[501px]:text-lg min-[760px]:text-xl text-[#fa5a96] font-bold">
             F<BsFillLightningFill className="inline" />
             ASH SALE
           </div>
           <div className="font-bold max-[252px]:text-[10px] max-[501px]:text-lg min-[760px]:text-xl">
             <Countdown
-              daysInHours={true}
               date={data.date + data.delay}
+              renderer={renderer}
+              zeroPadTime={2}
               onStart={(delta) => {
                 //Save the end date
                 if (localStorage.getItem("end_date") == null)
@@ -78,20 +89,17 @@ const FlashSalesComponent = () => {
           <div key={i}>
             <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 gap-2">
               {arrayCategory.map((i) => (
-                <Link key={i} to="/flash-sale/nescafe-coffee/4">
-                  <div className="flex flex-col">
-                    <div
-                      
-                      className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]"
-                    >
+                <Link key={i} to="/flash-sales">
+                  <div className="flex flex-col ">
+                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
                       <img
                         alt=""
                         src={unsplashimg.src}
-                        className="h-[150px] object-cover"
+                        className="object-cover h-[170px]"
                       />
-                    </div>
-                    <div className="text-[#fa5a96] text-center">
-                      Rp.10.000.000
+                      <div className="text-[#fa5a96] text-center">
+                        Rp.10.000.000
+                      </div>
                     </div>
                   </div>
                 </Link>

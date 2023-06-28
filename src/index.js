@@ -3,12 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "flowbite";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-tabs/style/react-tabs.css";
+import "react-dropdown/style.css";
 import App from "./App";
+import { ContextProvider } from "./contexts/ContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App/>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
   </React.StrictMode>
 );
 

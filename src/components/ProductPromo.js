@@ -38,7 +38,7 @@ const ProductPromo = () => {
                       <img
                         alt=""
                         src={unsplashimg.src}
-                        className="h-[150px] object-cover"
+                        className="h-[180px] object-cover"
                       />
                       <div className="flex flex-col justify-center absolute top-0 right-0 bg-yellow-300 text-white p-1 px-2 text-[10px]">
                         <div className="text-red-500">10%</div>

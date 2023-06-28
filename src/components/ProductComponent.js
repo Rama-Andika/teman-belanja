@@ -12,12 +12,12 @@ const ProductComponent = () => {
   console.log(array);
   return (
     <>
-      <div className="mt-5 py-4 text-center text-[#fa5a96] bg-white mb-5 border-b-4 border-[#fa5a96]">
+      <div className="mt-5 py-4 text-center text-[#fa5a96] bg-white border-b-4 border-[#fa5a96]">
         <p className="font-roboto max-[252px]:text-[10px] max-[501px]:text-lg min-[760px]:text-lg">
           REKOMENDASI
         </p>
       </div>
-      <div className="mt-5 border bg-white rounded-sm p-5">
+      <div className="border bg-white rounded-sm px-5 pt-2">
         <CarouselComponent
           showArrows={true}
           autoPlay={false}
@@ -28,17 +28,22 @@ const ProductComponent = () => {
               <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-2 ">
                 {arrayCategory.map((i) => (
                   <Link key={i} to="/product-detail/nescafe-coffee/4">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white">
-                      <img
-                        alt=""
-                        src={unsplashimg.src}
-                        className="h-[200px] object-cover"
-                      />
-                      <div className="text-left max-[434px]:text-sm ">
-                        Nescafe Coffee
-                      </div>
-                      <div className="text-left mt-5 font-bold text-[#fa5a96] max-[434px]:text-sm">
-                        Rp. 10.000.000
+                    <div className="flex flex-col ">
+                      <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                        <img
+                          alt=""
+                          src={unsplashimg.src}
+                          className="object-cover h-[180px]"
+                        />
+                        <div className="w-full  text-left max-[434px]:text-sm overflow-ellipsis overflow-hidden">
+                          Nescafe Coffee
+                        </div>
+                        <div className="text-[#fa5a96] text-left flex justify-between items-center pb-2">
+                          <div className="whitespace-nowrap overflow-ellipsis overflow-hidden text-[16px]">
+                            Rp.10.000.000
+                          </div>
+                          <div className="text-[12px] text-slate-500 whitespace-nowrap">10RB Terjual</div>
+                        </div>
                       </div>
                     </div>
                   </Link>
