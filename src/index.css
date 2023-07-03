@@ -9,8 +9,14 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #f5f5f5;
+}
+
+
+
+*:focus {
+  outline: none;
 }
 
 .font-roboto {
@@ -21,14 +27,13 @@ svg.star-svg {
   display: inline;
 }
 
-svg.ml-2.h-4.w-4{
-  
+svg.ml-2.h-4.w-4 {
 }
 
-svg.h-6.w-6.shrink-0{
+svg.h-6.w-6.shrink-0 {
   color: white;
 }
 
-svg.h-6.w-6.shrink-0:hover{
+svg.h-6.w-6.shrink-0:hover {
   background-color: transparent;
 }

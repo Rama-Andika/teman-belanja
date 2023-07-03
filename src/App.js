@@ -12,6 +12,9 @@ import ProductRekomendasiList from "./pages/ProductRekomendasiList";
 import ProductTerlarisList from "./pages/ProductTerlarisList";
 import ProductByKategory from "./pages/ProductByKategory";
 import ProductFlashSales from "./pages/ProductFlashSales";
+import AccountProfile from "./pages/AccountProfile";
+import AccountAddress from "./pages/AccountAddress";
+import PesananSaya from "./pages/PesananSaya";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path='/product-rekomendasi-list' element={<ProductRekomendasiList />} />
         <Route path='/product-terlaris-list' element={<ProductTerlarisList />} />
         <Route path='/:kategori' element={<ProductByKategory />} />
+        <Route path='/account/profile' element={<AccountProfile />} />
+        <Route path='/account/address' element={<AccountAddress />} />
+        <Route path='/user/purchase' element={<PesananSaya />} />
       </Routes>
     </BrowserRouter>
   );

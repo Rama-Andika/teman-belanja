@@ -26,6 +26,9 @@ input[type="number"] {
   border-radius: 4px;
   width: 100%;
   height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-sort {
@@ -36,4 +39,47 @@ input[type="number"] {
 
 .css-8m8l0c-MuiTabs-indicator {
   height: 3px !important;
+}
+
+#outlined-basic:focus {
+  outline: none !important;
+  border: 0px solid #fa5a96;
+  box-shadow: 0 0 1px #719ece;
+}
+
+#outlined-basic {
+  outline: none !important;
+  border: 1px solid rgb(203 213 225);
+}
+
+.input:focus {
+  outline: none !important;
+  border: 1px solid #fa5a96;
+  box-shadow: 0 0 1px #719ece;
+}
+
+.react-date-picker__wrapper {
+  padding: 8px 12px;
+  width: 100%;
+  border: 1px solid rgb(203 213 225);
+}
+
+input[type="number"]:focus {
+  --tw-ring-color: white !important;
+}
+
+input[type="text"]:focus {
+  --tw-ring-color: white !important;
+}
+
+textarea:focus {
+  --tw-ring-color: white !important;
+}
+
+.w-fit{
+  width: 100% !important;
+}
+
+[data-testid = "flowbite-tooltip"]{
+  width: fit-content !important;
 }

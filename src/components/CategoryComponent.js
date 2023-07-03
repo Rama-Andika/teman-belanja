@@ -74,7 +74,7 @@ const CategoryComponent = () => {
         >
           <div>
             <div className="overflow-x-auto overflow-y-hidden">
-              <div className="w-[1293px] grid grid-cols-10">
+              <div className="w-[1677px] grid grid-cols-10 ">
                 <Link to="/elektronik">
                   <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
                     <img

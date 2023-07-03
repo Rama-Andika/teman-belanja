@@ -5,6 +5,8 @@ import "flowbite";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "react-tabs/style/react-tabs.css";
 import "react-dropdown/style.css";
+import "react-date-picker/dist/DatePicker.css";
+import "react-calendar/dist/Calendar.css";
 import App from "./App";
 import { ContextProvider } from "./contexts/ContextProvider";
 

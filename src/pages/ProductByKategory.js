@@ -93,7 +93,7 @@ const ProductByKategory = () => {
               KOMPUTER DAN AKSESORIS TERBAIK
             </div>
             <div className="overflow-x-auto overflow-y-hidden] pb-10">
-              <div className="w-[1250px] grid grid-cols-6 ms-4 gap-2">
+              <div className="w-[1679px] grid grid-cols-6 ms-4 gap-2">
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
                     <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">

@@ -11,8 +11,12 @@ import { BiHelpCircle } from "react-icons/bi";
 import { TfiWorld } from "react-icons/tfi";
 import { SlBasket } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import { useStateContext } from "../contexts/ContextProvider";
 
 const NavbarComponent = ({ children }) => {
+  const {image} = useStateContext();
+  
+  
   return (
     <>
       <div className="">
@@ -56,28 +60,15 @@ const NavbarComponent = ({ children }) => {
                 <Dropdown
                   inline
                   label={
-                    <Avatar
-                      alt="User settings"
-                      img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                      rounded
-                      size="xs"
-                    />
+                    <Avatar alt="User settings" img={image} rounded size="xs" />
                   }
                 >
-                  <Dropdown.Header>
-                    <span className="block text-sm">Bonnie Green</span>
-                    <span className="block truncate text-sm font-medium">
-                      name@flowbite.com
-                    </span>
-                  </Dropdown.Header>
                   <Dropdown.Item>
-                    <Link to="/keranjang">Keranjang</Link>
+                    <Link to="/account/profile">Akun Saya</Link>
                   </Dropdown.Item>
 
-                  <Dropdown.Item>Settings</Dropdown.Item>
-                  <Dropdown.Item>Earnings</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item>Sign out</Dropdown.Item>
+                  <Dropdown.Item>Pesanan Saya</Dropdown.Item>
+                  <Dropdown.Item>Log Out</Dropdown.Item>
                 </Dropdown>
               </div>
             </div>
@@ -96,7 +87,7 @@ const NavbarComponent = ({ children }) => {
                     <div>
                       <SlBasket />
                     </div>
-                    <div className="absolute flex items-center justify-center text-[14px] top-[-15px] right-[-25px] bg-white text-[#fa5a96] rounded-full w-7 h-7 p-1 overflow-ellipsis overflow-hidden">
+                    <div className="absolute flex justify-center text-[14px] top-[-15px] right-[-25px] bg-white text-[#fa5a96] rounded-full w-7 h-7 pt-[0.08rem]  overflow-ellipsis overflow-hidden">
                       2
                     </div>
                   </Link>
