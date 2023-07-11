@@ -34,16 +34,12 @@ const ProductPromoDetail = () => {
 
   const images = [
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original: require("../assets/images/flashImage1.jpeg"),
+      thumbnail: require("../assets/images/flashImage1.jpeg"),
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      original: require("../assets/images/terlaris1.jpeg"),
+      thumbnail: require("../assets/images/terlaris1.jpeg"),
     },
   ];
 
@@ -58,52 +54,46 @@ const ProductPromoDetail = () => {
     <>
       <NavbarComponent>
         <div className="pt-5 font-roboto">
-          <div className="grid gap-6 grid-cols-2 max-[486px]:grid-cols-1">
-            <div className="relative">
-              <ReactImageGallery
-                items={images}
-                showPlayButton={false}
-                showNav={false}
-              />
-              <div className="flex flex-col justify-center absolute top-0 right-0 bg-yellow-300 text-white  p-1 max-[390px]:text-[10px] max-[390px]:px-2 px-4 text-[18px]">
-                <div className="text-red-500">10%</div>
-                <div>OFF</div>
-              </div>
-              <div className="flex flex-col justify-center absolute top-2 left-0 bg-orange-400 text-white p-1 px-2 text-[10px]">
-                <div>STAR</div>
+          <div className="max-[486px]:block grid gap-10 grid-cols-12 max-[486px]:grid-cols-1 bg-white p-5 mt-3">
+            <div className="col-span-5">
+              <div className="relative">
+                <ReactImageGallery
+                  items={images}
+                  showPlayButton={false}
+                  showNav={false}
+                />
+                <div className="flex flex-col justify-center absolute top-0 right-0 bg-yellow-300 text-white  p-1 max-[390px]:text-[10px] max-[390px]:px-2 px-4 text-[18px]">
+                  <div className="text-red-500">10%</div>
+                  <div>OFF</div>
+                </div>
+                <div className="flex flex-col justify-center absolute top-2 left-0 bg-orange-400 text-white p-1 px-2 text-[10px]">
+                  <div>STAR</div>
+                </div>
               </div>
             </div>
-            <div className="flex flex-col justify-between text-[10px] min-[768px]:text-lg">
+            <div className="col-span-7 flex flex-col justify-between text-[10px] min-[768px]:text-lg max-[486px]:mt-5">
               <div className="flex flex-col gap-4">
                 <div className="w-full overflow-ellipsis overflow-hidden">
-                  <p className="text-[22px]">Nescafe Coffee</p>
+                  <p className="font-roboto text-[22px] font-bold">
+                    NESCAFE COFFEE
+                  </p>
                 </div>
-                <div className="text-[24px] text-center flex flex-col items-start">
-                  <div className="relative">
-                    <div className="text-slate-400">
-                      <p>Rp.9.000.000</p>
-                    </div>
-                    <div className="">
-                      <hr className="bg-slate-400 h-1 min-[766px]:mt-[-16px] mt-[-20px]" />
-                    </div>
+                <div className="max-[486px]:text-[24px] text-[30px] text-[#fa5a96] font-roboto font-bold">
+                  Rp. 10.000.000
+                </div>
+                <div className="text-[12px] flex gap-2 items-center mb-5">
+                  <div>
+                    <Rating
+                      size={20}
+                      transition
+                      allowFraction
+                      initialValue={5}
+                    />
                   </div>
-                  <div className="mt-2 text-[#fa5a96]">Rp.10.000.000</div>
-                  <div className="text-[12px] flex gap-2 items-center mb-5">
-                    <div>
-                      <Rating
-                        size={20}
-                        transition
-                        allowFraction
-                        initialValue={5}
-                      />
-                    </div>
 
-                    <div className="mt-1">100 Terjual</div>
-                  </div>
-                  <div className="text-[12px] text-slate-400">
-                    Tabanan, Bali
-                  </div>
+                  <div className="mt-1">100 Terjual</div>
                 </div>
+                <div className="text-[12px] text-slate-400">TABANAN, BALI</div>
               </div>
 
               <div className="flex flex-col gap-8 max-[1289px]:mt-10 ">
@@ -112,7 +102,7 @@ const ProductPromoDetail = () => {
                   <div className="flex items-center">
                     <button
                       onClick={() => setCountToMinus()}
-                      className="px-3 h-8 bg-slate-200 rounded-sm"
+                      className="px-3 h-8 border border-slate-200 rounded-sm"
                     >
                       -
                     </button>
@@ -120,7 +110,7 @@ const ProductPromoDetail = () => {
                     <input
                       type="number"
                       min="1"
-                      className="shrink text-center border border-slate-300 text-[12px]"
+                      className="shrink text-center border border-slate-200 text-[12px]"
                       onChange={(e) => onChangeCount(e)}
                       value={count}
                       style={{ width: "50px", height: "30px" }}
@@ -128,15 +118,13 @@ const ProductPromoDetail = () => {
 
                     <button
                       onClick={() => setCountToPlus()}
-                      className="py-0 px-3 h-8 bg-slate-200 rounded-sm"
+                      className="py-0 px-3 h-8 border border-slate-200 rounded-sm"
                     >
                       +
                     </button>
                   </div>
 
-                  <div className="ms-7 whitespace-wrap">
-                    Tersisa {maxCount} buah
-                  </div>
+                  <div className="ms-7">Tersisa {maxCount} buah</div>
                 </div>
                 <div className="max-[378px]:flex-col flex gap-1">
                   <div>
@@ -157,7 +145,7 @@ const ProductPromoDetail = () => {
             </div>
           </div>
 
-          <div className="pt-9">
+          <div className=" bg-white p-5 mt-3">
             <p className="font-roboto text-lg font-bold">Deskripsi Produk</p>
             <div className="mt-5">
               Irure proident laboris duis amet aliqua Lorem consectetur eiusmod

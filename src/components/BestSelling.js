@@ -3,10 +3,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const BestSelling = () => {
-  const unsplashimg = {
-    src: "https://source.unsplash.com/1600x900/?random",
-    alt: "random unsplash image",
-  };
+  // const unsplashimg = {
+  //   src: "https://source.unsplash.com/1600x900/?random",
+  //   alt: "random unsplash image",
+  // };
   const array = [1, 2, 3];
   const arrayCategory = [1, 2, 3, 4, 5, 6];
 
@@ -23,6 +23,8 @@ const BestSelling = () => {
         </div>
       </div>
       <CarouselComponent
+        className="group"
+        showIndicators={false}
         showArrows={true}
         autoPlay={false}
         infiniteLoop={false}
@@ -31,23 +33,27 @@ const BestSelling = () => {
           <div key={i}>
             <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 gap-2">
               {arrayCategory.map((i) => (
-                <Link key={i} to="/product-terlaris-list">
-                  <div className="flex flex-col">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] relative">
-                      <img
-                        alt=""
-                        src={unsplashimg.src}
-                        className="h-[180px] object-cover"
-                      />
-                      <div className="absolute text-[12px] top-0 left-0 p-2 text-white bg-orange-400 rounded-sm">
-                        TOP
-                      </div>
-                      <div className="w-full text-left max-[434px]:text-sm overflow-ellipsis overflow-hidden text-[18px]">
-                          Nescafe Coffee
+                <>
+                  {i <= 6 && (
+                    <Link key={i} to="/product-terlaris-list">
+                      <div className="flex flex-col">
+                        <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] relative">
+                          <img
+                            alt=""
+                            src={require(`../assets/images/terlaris${i}.jpeg`)}
+                            className="h-[180px] object-cover"
+                          />
+                          <div className="absolute text-[12px] top-0 left-0 p-2 text-white bg-orange-400 rounded-sm">
+                            TOP
+                          </div>
+                          <div className="w-full text-left max-[434px]:text-sm overflow-ellipsis overflow-hidden text-[18px]">
+                            Nescafe Coffee
+                          </div>
                         </div>
-                    </div>
-                  </div>
-                </Link>
+                      </div>
+                    </Link>
+                  )}
+                </>
               ))}
             </div>
           </div>

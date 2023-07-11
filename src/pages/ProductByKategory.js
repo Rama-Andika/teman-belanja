@@ -96,7 +96,7 @@ const ProductByKategory = () => {
               <div className="w-[1679px] grid grid-cols-6 ms-4 gap-2">
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
                       <img
                         alt=""
                         src={komputer1}
@@ -118,7 +118,7 @@ const ProductByKategory = () => {
                 </Link>
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
                       <img
                         alt=""
                         src={komputer2}
@@ -140,7 +140,7 @@ const ProductByKategory = () => {
                 </Link>
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
                       <img
                         alt=""
                         src={komputer3}
@@ -162,7 +162,7 @@ const ProductByKategory = () => {
                 </Link>
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
                       <img
                         alt=""
                         src={komputer4}
@@ -184,7 +184,7 @@ const ProductByKategory = () => {
                 </Link>
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
                       <img
                         alt=""
                         src={komputer5}
@@ -206,7 +206,7 @@ const ProductByKategory = () => {
                 </Link>
                 <Link to="/product-detail/nescafe-coffee/4">
                   <div className="flex flex-col items-center">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
                       <img
                         alt=""
                         src={komputer6}
@@ -390,7 +390,7 @@ const ProductByKategory = () => {
                       <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-1 ">
                         {arrayCategory.map((i) => (
                           <Link key={i} to="/product-detail/nescafe-coffee/4">
-                            <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white h-[283.65px] w-auto flex flex-col items-center">
+                            <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white h-[283.65px] w-auto flex flex-col items-center">
                               <img
                                 alt=""
                                 src={unsplashimg.src}
@@ -415,7 +415,7 @@ const ProductByKategory = () => {
                       <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1 gap-1 ">
                         {arrayCategory.map((i) => (
                           <Link key={i} to="/product-detail/nescafe-coffee/4">
-                            <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white w-auto flex flex-col items-center">
+                            <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
                               <img
                                 alt=""
                                 src={unsplashimg.src}
@@ -568,7 +568,7 @@ const ProductByKategory = () => {
                       <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-1 ">
                         {arrayCategory.map((i) => (
                           <Link key={i} to="/product-detail/nescafe-coffee/4">
-                            <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white h-[283.65px] w-auto flex flex-col items-center">
+                            <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white h-[283.65px] w-auto flex flex-col items-center">
                               <img
                                 alt=""
                                 src={P1}
@@ -593,7 +593,7 @@ const ProductByKategory = () => {
                       <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1  gap-1 ">
                         {arrayCategory.map((i) => (
                           <Link key={i} to="/product-detail/nescafe-coffee/4">
-                            <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white h-[283.65px] w-auto flex flex-col items-center">
+                            <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white h-[283.65px] w-auto flex flex-col items-center">
                               <img
                                 alt=""
                                 src={P1}

@@ -7,7 +7,6 @@ import { useStateContext } from "../contexts/ContextProvider";
 import { Dropdown } from "flowbite-react";
 import { Rating } from "react-simple-star-rating";
 
-
 function TabPanel(props) {
   const { children, value, index, text, ...other } = props;
 
@@ -45,10 +44,7 @@ const ProductTerlarisList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const arrayCategory = [1, 2, 3, 4, 5, 6];
-  const unsplashimg = {
-    src: "https://source.unsplash.com/1600x900/?random",
-    alt: "random unsplash image",
-  };
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -219,39 +215,45 @@ const ProductTerlarisList = () => {
               <div className="relative">
                 <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3  grid-cols-2 max-[375px]:grid-cols-1  gap-1 ">
                   {arrayCategory.map((i) => (
-                    <Link key={i} to="/product-detail/nescafe-coffee/4">
-                      <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] relative bg-white w-auto flex flex-col items-center">
-                        <img
-                          alt=""
-                          src={unsplashimg.src}
-                          className="w-full h-[230.4px] object-cover "
-                        />
-                        <div className="absolute text-[12px] top-0 left-0 p-2 text-white bg-orange-400 rounded-sm">
-                          TOP
-                        </div>
-                        <div className="w-full px-3 max-[434px]:text-sm overflow-ellipsis overflow-hidden text-[18px]">
-                          Nescafe Coffee
-                        </div>
-                        <div className="w-full px-3 mt-3 font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
-                          Rp. 10.000.000
-                        </div>
-                        <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
-                          <div>
-                            <Rating
-                              size={10}
-                              transition
-                              allowFraction
-                              initialValue={5}
+                    <>
+                      {i <= 6 && (
+                        <Link key={i} to="/product-detail/nescafe-coffee/4">
+                          <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] relative bg-white w-auto flex flex-col items-center">
+                            <img
+                              alt=""
+                              src={require(`../assets/images/terlaris${i}.jpeg`)}
+                              className="w-full h-[230.4px] object-cover "
                             />
-                          </div>
+                            <div className="absolute text-[12px] top-0 left-0 p-2 text-white bg-orange-400 rounded-sm">
+                              TOP
+                            </div>
+                            <div className="w-full px-3 max-[434px]:text-sm overflow-ellipsis overflow-hidden text-[18px]">
+                              Nescafe Coffee
+                            </div>
+                            <div className="w-full px-3 mt-3 font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
+                              Rp. 10.000.000
+                            </div>
+                            <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                              <div>
+                                <Rating
+                                  size={10}
+                                  transition
+                                  allowFraction
+                                  initialValue={5}
+                                />
+                              </div>
 
-                          <div className="text-slate-500 mt-1">100 Terjual</div>
-                        </div>
-                        <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
-                          KOTA DENPASAR
-                        </div>
-                      </div>
-                    </Link>
+                              <div className="text-slate-500 mt-1">
+                                100 Terjual
+                              </div>
+                            </div>
+                            <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                              KOTA DENPASAR
+                            </div>
+                          </div>
+                        </Link>
+                      )}
+                    </>
                   ))}
                 </div>
               </div>
@@ -265,7 +267,7 @@ const ProductTerlarisList = () => {
             <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-1 ">
               {arrayCategory.map((i) => (
                 <Link key={i} to="/product-detail/nescafe-coffee/4">
-                  <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white h-[283.65px] w-auto flex flex-col items-center">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white h-[283.65px] w-auto flex flex-col items-center">
                     <img
                       alt=""
                       src={unsplashimg.src}

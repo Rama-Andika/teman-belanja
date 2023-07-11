@@ -6,12 +6,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const FlashSalesComponent = () => {
-  const unsplashimg = {
-    src: "https://source.unsplash.com/1600x900/?random",
-    alt: "random unsplash image",
-  };
   const array = [1, 2, 3];
-  const arrayCategory = [1, 2, 3, 4, 5, 6];
+
   const getLocalStorageValue = (s) => localStorage.getItem(s);
 
   const [data, setData] = useState({ date: Date.now(), delay: 1000000 });
@@ -81,29 +77,99 @@ const FlashSalesComponent = () => {
         </div>
       </div>
       <CarouselComponent
+        className="group"
         showArrows={true}
         autoPlay={false}
         infiniteLoop={false}
+        showIndicators={false}
       >
         {array.map((i) => (
           <div key={i}>
             <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 gap-2">
-              {arrayCategory.map((i) => (
-                <Link key={i} to="/flash-sales">
-                  <div className="flex flex-col ">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05]">
-                      <img
-                        alt=""
-                        src={unsplashimg.src}
-                        className="object-cover h-[170px]"
-                      />
-                      <div className="text-[#fa5a96] text-center">
-                        Rp.10.000.000
-                      </div>
+              <Link to="/flash-sales">
+                <div className="flex flex-col ">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage1.jpeg")}
+                      className="object-cover h-[170px]"
+                    />
+                    <div className="text-[#fa5a96] text-center text-[18px] font-bold">
+                      Rp.10.000.000
                     </div>
                   </div>
-                </Link>
-              ))}
+                </div>
+              </Link>
+              <Link  to="/flash-sales">
+                <div className="flex flex-col ">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashimage2.jpeg")}
+                      className="object-cover h-[170px]"
+                    />
+                    <div className="text-[#fa5a96] text-center text-[18px] font-bold">
+                      Rp.10.000.000
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link  to="/flash-sales">
+                <div className="flex flex-col ">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage3.png")}
+                      className="object-cover h-[170px]"
+                    />
+                    <div className="text-[#fa5a96] text-center text-[18px] font-bold">
+                      Rp.10.000.000
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link  to="/flash-sales">
+                <div className="flex flex-col ">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage4.png")}
+                      className="object-cover h-[170px]"
+                    />
+                    <div className="text-[#fa5a96] text-center text-[18px] font-bold">
+                      Rp.10.000.000
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link  to="/flash-sales">
+                <div className="flex flex-col ">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage5.png")}
+                      className="object-cover h-[170px]"
+                    />
+                    <div className="text-[#fa5a96] text-center text-[18px] font-bold">
+                      Rp.10.000.000
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link  to="/flash-sales">
+                <div className="flex flex-col ">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01]">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage6.jpeg")}
+                      className="object-cover h-[170px]"
+                    />
+                    <div className="text-[#fa5a96] text-center text-[18px] font-bold">
+                      Rp.10.000.000
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         ))}

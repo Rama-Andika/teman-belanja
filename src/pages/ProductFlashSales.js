@@ -7,11 +7,11 @@ import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
 
 const ProductFlashSales = () => {
-  const arrayCategory = [1, 2, 3, 4, 5, 6];
-  const unsplashimg = {
-    src: "https://source.unsplash.com/1600x900/?random",
-    alt: "random unsplash image",
-  };
+  // const arrayCategory = [1, 2, 3, 4, 5, 6];
+  // const unsplashimg = {
+  //   src: "https://source.unsplash.com/1600x900/?random",
+  //   alt: "random unsplash image",
+  // };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -95,38 +95,186 @@ const ProductFlashSales = () => {
           <div className="grid grid-cols-1 mt-5">
             <div className="relative">
               <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1 gap-1 ">
-                {arrayCategory.map((i) => (
-                  <Link key={i} to="/flash-sales/nescafe-coffee/4">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white w-auto flex flex-col items-center">
-                      <img
-                        alt=""
-                        src={unsplashimg.src}
-                        className=" w-full h-[280px] object-cover "
-                      />
-                      <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
-                        Nescafe Coffee
-                      </div>
-                      <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
-                        Rp. 10.000.000
-                      </div>
-                      <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
-                        <div>
-                          <Rating
-                            size={10}
-                            transition
-                            allowFraction
-                            initialValue={5}
-                          />
-                        </div>
-
-                        <div className="text-slate-500 mt-1">100 Terjual</div>
-                      </div>
-                      <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
-                        KOTA DENPASAR
-                      </div>
+                <Link to="/flash-sales/nescafe-coffee/4">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage1.jpeg")}
+                      className=" w-full h-[280px] object-fill "
+                    />
+                    <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
+                      Nescafe Coffee
                     </div>
-                  </Link>
-                ))}
+                    <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      Rp. 10.000.000
+                    </div>
+                    <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                      <div>
+                        <Rating
+                          size={10}
+                          transition
+                          allowFraction
+                          initialValue={5}
+                        />
+                      </div>
+
+                      <div className="text-slate-500 mt-1">100 Terjual</div>
+                    </div>
+                    <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      KOTA DENPASAR
+                    </div>
+                  </div>
+                </Link>
+                <Link to="/flash-sales/nescafe-coffee/4">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashimage2.jpeg")}
+                      className=" w-full h-[280px] object-fill "
+                    />
+                    <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
+                      Nescafe Coffee
+                    </div>
+                    <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      Rp. 10.000.000
+                    </div>
+                    <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                      <div>
+                        <Rating
+                          size={10}
+                          transition
+                          allowFraction
+                          initialValue={5}
+                        />
+                      </div>
+
+                      <div className="text-slate-500 mt-1">100 Terjual</div>
+                    </div>
+                    <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      KOTA DENPASAR
+                    </div>
+                  </div>
+                </Link>
+                <Link to="/flash-sales/nescafe-coffee/4">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage3.png")}
+                      className=" w-full h-[280px] object-fill "
+                    />
+                    <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
+                      Nescafe Coffee
+                    </div>
+                    <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden ">
+                      Rp. 10.000.000
+                    </div>
+                    <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                      <div>
+                        <Rating
+                          size={10}
+                          transition
+                          allowFraction
+                          initialValue={5}
+                        />
+                      </div>
+
+                      <div className="text-slate-500 mt-1">100 Terjual</div>
+                    </div>
+                    <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      KOTA DENPASAR
+                    </div>
+                  </div>
+                </Link>
+                <Link to="/flash-sales/nescafe-coffee/4">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage4.png")}
+                      className=" w-full h-[280px] object-fill "
+                    />
+                    <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
+                      Nescafe Coffee
+                    </div>
+                    <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      Rp. 10.000.000
+                    </div>
+                    <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                      <div>
+                        <Rating
+                          size={10}
+                          transition
+                          allowFraction
+                          initialValue={5}
+                        />
+                      </div>
+
+                      <div className="text-slate-500 mt-1">100 Terjual</div>
+                    </div>
+                    <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      KOTA DENPASAR
+                    </div>
+                  </div>
+                </Link>
+                <Link to="/flash-sales/nescafe-coffee/4">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage5.png")}
+                      className=" w-full h-[280px] object-fill "
+                    />
+                    <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
+                      Nescafe Coffee
+                    </div>
+                    <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      Rp. 10.000.000
+                    </div>
+                    <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                      <div>
+                        <Rating
+                          size={10}
+                          transition
+                          allowFraction
+                          initialValue={5}
+                        />
+                      </div>
+
+                      <div className="text-slate-500 mt-1">100 Terjual</div>
+                    </div>
+                    <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      KOTA DENPASAR
+                    </div>
+                  </div>
+                </Link>
+                <Link to="/flash-sales/nescafe-coffee/4">
+                  <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white w-auto flex flex-col items-center">
+                    <img
+                      alt=""
+                      src={require("../assets/images/flashImage6.jpeg")}
+                      className=" w-full h-[280px] object-fill "
+                    />
+                    <div className="w-full p-3 text-left max-[434px]:text-lg overflow-ellipsis overflow-hidden">
+                      Nescafe Coffee
+                    </div>
+                    <div className="w-full px-3  font-bold text-[#fa5a96] max-[434px]:text-sm whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      Rp. 10.000.000
+                    </div>
+                    <div className="w-full px-3 font-bold text-[#fa5a96] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden flex gap-1 items-center">
+                      <div>
+                        <Rating
+                          size={10}
+                          transition
+                          allowFraction
+                          initialValue={5}
+                        />
+                      </div>
+
+                      <div className="text-slate-500 mt-1">100 Terjual</div>
+                    </div>
+                    <div className="w-full p-3 text-[#000000A6] text-[12px] whitespace-nowrap overflow-ellipsis overflow-hidden">
+                      KOTA DENPASAR
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

@@ -12,6 +12,8 @@ const ProductFlashSalesDetail = () => {
   const [count, setcount] = useState(1);
   const navigate = useNavigate();
 
+  let text = "Nescafe Coffee"
+
   const maxCount = 5;
 
   const setCountToMinus = () => {
@@ -40,16 +42,12 @@ const ProductFlashSalesDetail = () => {
 
   const images = [
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original: require("../assets/images/flashImage1.jpeg"),
+      thumbnail: require("../assets/images/flashImage1.jpeg"),
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      original: require("../assets/images/terlaris1.jpeg"),
+      thumbnail: require("../assets/images/terlaris1.jpeg"),
     },
   ];
 
@@ -100,8 +98,8 @@ const ProductFlashSalesDetail = () => {
     <>
       <NavbarComponent>
         <div className="pt-5 font-roboto">
-          <div className="">
-            <div className="flex gap-2 items-center justify-center mb-5">
+          <div className="bg-white py-3">
+            <div className="flex gap-2 items-center justify-center">
               <div className="font-roboto text-xl text-[#ffafcc] font-bold">
                 F<BsFillLightningFill className="inline" />
                 ASH SALE
@@ -128,21 +126,20 @@ const ProductFlashSalesDetail = () => {
             </div>
           </div>
 
-          <div className="grid gap-6 grid-cols-2 max-[486px]:grid-cols-1 ">
-            <div>
+          <div className="max-[486px]:block grid gap-10 grid-cols-12 max-[486px]:grid-cols-1 bg-white p-5 mt-3">
+            <div className="col-span-5">
               <ReactImageGallery
                 items={images}
                 showPlayButton={false}
                 showNav={false}
-                className="w-[200px] h-[100px]"
               />
             </div>
-            <div className="flex flex-col justify-between text-[10px] min-[768px]:text-lg">
+            <div className="col-span-7 flex flex-col justify-between text-[10px] min-[768px]:text-lg max-[486px]:mt-5">
               <div className="flex flex-col gap-4">
                 <div className="w-full overflow-ellipsis overflow-hidden">
-                  <p className="font-roboto text-[22px]">Nescafe Coffee</p>
+                  <p className="font-roboto text-[22px] font-bold">{text.toUpperCase()}</p>
                 </div>
-                <div className="text-[24px] text-[#fa5a96] font-roboto">
+                <div className="max-[486px]:text-[24px] text-[30px] text-[#fa5a96] font-roboto font-bold">
                   Rp. 10.000.000
                 </div>
                 <div className="text-[12px] flex gap-2 items-center mb-5">
@@ -157,7 +154,7 @@ const ProductFlashSalesDetail = () => {
 
                   <div className="mt-1">100 Terjual</div>
                 </div>
-                <div className="text-[12px] text-slate-400">Tabanan, Bali</div>
+                <div className="text-[12px] text-slate-400">TABANAN, BALI</div>
               </div>
 
               <div className="flex flex-col gap-8 max-[1289px]:mt-10 ">
@@ -166,7 +163,7 @@ const ProductFlashSalesDetail = () => {
                   <div className="flex items-center">
                     <button
                       onClick={() => setCountToMinus()}
-                      className="px-3 h-8 bg-slate-200 rounded-sm"
+                      className="px-3 h-8 border border-slate-200 rounded-sm"
                     >
                       -
                     </button>
@@ -174,7 +171,7 @@ const ProductFlashSalesDetail = () => {
                     <input
                       type="number"
                       min="1"
-                      className="shrink text-center border border-slate-300 text-[12px]"
+                      className="shrink text-center border border-slate-200 text-[12px]"
                       onChange={(e) => onChangeCount(e)}
                       value={count}
                       style={{ width: "50px", height: "30px" }}
@@ -182,7 +179,7 @@ const ProductFlashSalesDetail = () => {
 
                     <button
                       onClick={() => setCountToPlus()}
-                      className="py-0 px-3 h-8 bg-slate-200 rounded-sm"
+                      className="py-0 px-3 h-8 border border-slate-200 rounded-sm"
                     >
                       +
                     </button>
@@ -209,7 +206,7 @@ const ProductFlashSalesDetail = () => {
             </div>
           </div>
 
-          <div className="pt-9">
+          <div className=" bg-white p-5 mt-3">
             <p className="font-roboto text-lg font-bold">Deskripsi Produk</p>
             <div className="mt-5">
               Irure proident laboris duis amet aliqua Lorem consectetur eiusmod

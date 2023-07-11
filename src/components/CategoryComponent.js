@@ -20,16 +20,10 @@ import sepatuWanita from "../assets/images/sepatuWanita.png";
 import TasWanita from "../assets/images/tasWanita.png";
 import Otomotif from "../assets/images/otomotif.png";
 import { Link } from "react-router-dom";
-import { RiArrowLeftSLine } from "react-icons/ri";
-import { RiArrowRightSLine } from "react-icons/ri";
+
 
 const CategoryComponent = () => {
-  const arrowStyles = {
-    position: "absolute",
-    zIndex: 2,
-    top: "calc(50% - 15px)",
-    cursor: "pointer",
-  };
+  
   return (
     <>
       <div className="mt-5 border bg-white rounded-sm  font-roboto text-[14px] ">
@@ -45,38 +39,13 @@ const CategoryComponent = () => {
           infiniteLoop={false}
           showIndicators={false}
           swipeable={false}
-          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-            hasPrev && (
-              <button
-                type="button"
-                onClick={onClickHandler}
-                title={label}
-                style={{ ...arrowStyles }}
-                className="left-0 rounded-full shadow-xl bg-white w-[30px] h-[30px] group-hover:w-[50px] group-hover:h-[50px]"
-              >
-                <RiArrowLeftSLine className="text-center text-slate-500 group-hover:text-[50px]" />
-              </button>
-            )
-          }
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-            hasNext && (
-              <button
-                type="button"
-                onClick={onClickHandler}
-                title={label}
-                style={{ ...arrowStyles }}
-                className="right-0 rounded-full shadow-xl bg-white w-[30px] h-[30px] group-hover:w-[50px] group-hover:h-[50px]"
-              >
-                <RiArrowRightSLine className="text-center text-slate-500 group-hover:text-[50px]" />
-              </button>
-            )
-          }
+          
         >
           <div>
             <div className="overflow-x-auto overflow-y-hidden">
               <div className="w-[1677px] grid grid-cols-10 ">
-                <Link to="/elektronik">
-                  <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <Link to="/category/elektronik">
+                  <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                     <img
                       alt=""
                       src={Eletronik}
@@ -88,7 +57,7 @@ const CategoryComponent = () => {
                   </div>
                 </Link>
 
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Laptop}
@@ -98,7 +67,7 @@ const CategoryComponent = () => {
                     Komputer & aksesoris
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Handphone}
@@ -108,7 +77,7 @@ const CategoryComponent = () => {
                     Handphone & Aksesoris
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={PakaianPria}
@@ -118,7 +87,7 @@ const CategoryComponent = () => {
                     Pakaian Pria
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Sepatu}
@@ -128,7 +97,7 @@ const CategoryComponent = () => {
                     Sepatu Pria
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Tas}
@@ -138,7 +107,7 @@ const CategoryComponent = () => {
                     Tas Pria
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={KacaMata}
@@ -148,7 +117,7 @@ const CategoryComponent = () => {
                     Aksesoris Fashion
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={JamTangan}
@@ -158,7 +127,7 @@ const CategoryComponent = () => {
                     Jam Tangan
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Kesehatan}
@@ -168,7 +137,7 @@ const CategoryComponent = () => {
                     Kesehatan
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Gitar}
@@ -178,7 +147,7 @@ const CategoryComponent = () => {
                     Hobi & Koleksi
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Makanan}
@@ -188,7 +157,7 @@ const CategoryComponent = () => {
                     Makanan & Minuman
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Perawatan}
@@ -198,7 +167,7 @@ const CategoryComponent = () => {
                     Perawatan & Kecantikan
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Rumah}
@@ -208,7 +177,7 @@ const CategoryComponent = () => {
                     Perlengkapan Rumah
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={PakaianWanita}
@@ -218,7 +187,7 @@ const CategoryComponent = () => {
                     Pakaian Wanita
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={PakaianBayi}
@@ -228,7 +197,7 @@ const CategoryComponent = () => {
                     Fashion Bayi & Anak
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={PakaianMuslim}
@@ -238,7 +207,7 @@ const CategoryComponent = () => {
                     Fashion Muslim
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={IbuBayi}
@@ -248,7 +217,7 @@ const CategoryComponent = () => {
                     Ibu & Bayi
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={sepatuWanita}
@@ -258,7 +227,7 @@ const CategoryComponent = () => {
                     Sepatu Wanita
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={TasWanita}
@@ -268,7 +237,7 @@ const CategoryComponent = () => {
                     Tas Wanita
                   </div>
                 </div>
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Otomotif}
@@ -286,7 +255,7 @@ const CategoryComponent = () => {
             <div className="overflow-x-auto overflow-y-hidden h-full">
               <div className="w-[1293px] grid grid-cols-10">
                 <Link to="/elektronik">
-                  <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                  <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                     <img
                       alt=""
                       src={Eletronik}
@@ -298,7 +267,7 @@ const CategoryComponent = () => {
                   </div>
                 </Link>
 
-                <div className=" transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] hover:shadow-lg border border-slate-100 h-[150px] ">
+                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                   <img
                     alt=""
                     src={Laptop}

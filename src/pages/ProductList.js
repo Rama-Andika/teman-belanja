@@ -57,7 +57,7 @@ const ProductList = () => {
                   <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-2 ">
                     {arrayCategory.map((i) => (
                       <Link key={i} to="/product-detail/nescafe-coffee/4">
-                        <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white">
+                        <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white">
                           <img
                             alt=""
                             src={unsplashimg.src}
@@ -111,7 +111,7 @@ const ProductList = () => {
               <div className=" mt-3 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-2 ">
                 {arrayCategory.map((i) => (
                   <Link key={i} to="/product-detail/nescafe-coffee/4">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white">
                       <img
                         alt=""
                         src={unsplashimg.src}
@@ -133,7 +133,7 @@ const ProductList = () => {
               <div className=" mt-3 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 min-[1170px]:grid-cols-5 gap-2 ">
                 {arrayCategory.map((i) => (
                   <Link key={i} to="/product-detail/nescafe-coffee/4">
-                    <div className="transition-all hover:scale-x-[1.05] hover:scale-y-[1.05] bg-white">
+                    <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] bg-white">
                       <img
                         alt=""
                         src={unsplashimg.src}

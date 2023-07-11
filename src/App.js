@@ -15,28 +15,44 @@ import ProductFlashSales from "./pages/ProductFlashSales";
 import AccountProfile from "./pages/AccountProfile";
 import AccountAddress from "./pages/AccountAddress";
 import PesananSaya from "./pages/PesananSaya";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/product-detail/:slug/:id' element={<ProductDetail />} />
-        <Route path='/flash-sales/:slug/:id' element={<ProductFlashSalesDetail />} />
-        <Route path='/flash-sales' element={<ProductFlashSales />} />
-        <Route path='/product-promo/:slug/:id' element={<ProductPromoDetail />} />
-        <Route path='/keranjang' element={<Keranjang />} />
-        <Route path='/checkout' element={<Checkout />} />
-        <Route path='/product-list' element={<ProductList />} />
-        <Route path='/product-rekomendasi-list' element={<ProductRekomendasiList />} />
-        <Route path='/product-terlaris-list' element={<ProductTerlarisList />} />
-        <Route path='/:kategori' element={<ProductByKategory />} />
-        <Route path='/account/profile' element={<AccountProfile />} />
-        <Route path='/account/address' element={<AccountAddress />} />
-        <Route path='/user/purchase' element={<PesananSaya />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Toaster />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/product-detail/:slug/:id" element={<ProductDetail />} />
+          <Route
+            path="/flash-sales/:slug/:id"
+            element={<ProductFlashSalesDetail />}
+          />
+          <Route path="/flash-sales" element={<ProductFlashSales />} />
+          <Route
+            path="/product-promo/:slug/:id"
+            element={<ProductPromoDetail />}
+          />
+          <Route path="/keranjang" element={<Keranjang />} />
+          <Route path="/checkout/:state" element={<Checkout />} />
+          <Route path="/product-list" element={<ProductList />} />
+          <Route
+            path="/product-rekomendasi-list"
+            element={<ProductRekomendasiList />}
+          />
+          <Route
+            path="/product-terlaris-list"
+            element={<ProductTerlarisList />}
+          />
+          <Route path="/category/:kategori" element={<ProductByKategory />} />
+          <Route path="/account/profile" element={<AccountProfile />} />
+          <Route path="/account/address" element={<AccountAddress />} />
+          <Route path="/user/purchase" element={<PesananSaya />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

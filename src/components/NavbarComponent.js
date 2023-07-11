@@ -14,18 +14,16 @@ import { Link } from "react-router-dom";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const NavbarComponent = ({ children }) => {
-  const {image} = useStateContext();
-  
-  
+  let items = 200;
+  const { image } = useStateContext();
+
   return (
     <>
       <div className="">
-        <div className="bg-[#fa5a96]">
+        <div className="bg-gradient-to-bl	from-[#FF428A] via-[#FF5B9A] to-[#FC69A1]">
           <div className="min-[920px]:mx-28 px-4 text-[10px] text-white flex flex-col min-[547px]:flex-row justify-between items-center ">
             <div className="flex items-center gap-3 mt-2">
               <div>Seller centre</div>
-              <div>|</div>
-              <div>Download</div>
               <div>|</div>
               <div>Ikuti kami di</div>
               <div className="flex gap-1 ms-1">
@@ -54,7 +52,12 @@ const NavbarComponent = ({ children }) => {
                 <div>
                   <TfiWorld className="text-[12px]" />
                 </div>
-                <div>Bahasa</div>
+                <div>
+                  <Dropdown inline label="Bahasa">
+                    <Dropdown.Item>Indonesia</Dropdown.Item>
+                    <Dropdown.Item>English</Dropdown.Item>
+                  </Dropdown>
+                </div>
               </div>
               <div className="flex md:order-2 gap-2">
                 <Dropdown
@@ -67,7 +70,9 @@ const NavbarComponent = ({ children }) => {
                     <Link to="/account/profile">Akun Saya</Link>
                   </Dropdown.Item>
 
-                  <Dropdown.Item>Pesanan Saya</Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link to="/user/purchase">Pesanan Saya</Link>
+                  </Dropdown.Item>
                   <Dropdown.Item>Log Out</Dropdown.Item>
                 </Dropdown>
               </div>
@@ -76,19 +81,23 @@ const NavbarComponent = ({ children }) => {
           <Navbar
             fluid
             rounded
-            className="bg-[#fa5a96] min-[920px]:mx-28 text-white mt-5"
+            className="bg-transparent min-[920px]:mx-28 text-white mt-5"
           >
-            <Navbar.Brand href="/">OXYSYSTEM</Navbar.Brand>
+            <div className="flex items-center">
+              <Link to="/">
+                TEMAN BELANJA
+              </Link>
+            </div>
 
             <div className="flex md:order-2 gap-2">
               <div className="text-xl max-[768px]:mt-2">
-                <div className="relative max-[768px]:me-5">
+                <div className="relative max-[768px]:me-5 me-4">
                   <Link to="/keranjang">
                     <div>
                       <SlBasket />
                     </div>
-                    <div className="absolute flex justify-center text-[14px] top-[-15px] right-[-25px] bg-white text-[#fa5a96] rounded-full w-7 h-7 pt-[0.08rem]  overflow-ellipsis overflow-hidden">
-                      2
+                    <div className="absolute flex justify-center items-center text-[14px] top-[-15px] right-[-25px] bg-white text-[#fa5a96] rounded-full w-7 h-7 pt-[0.08rem]  overflow-ellipsis overflow-hidden">
+                      {items > 99 ? "99+" : items}
                     </div>
                   </Link>
                 </div>

@@ -72,14 +72,28 @@ input[type="text"]:focus {
   --tw-ring-color: white !important;
 }
 
+input[type="checkbox"]:checked {
+  background-color: #fa5a96 !important;
+}
+
+input[type="checkbox"]:focus {
+  --tw-ring-color: white !important;
+}
+
 textarea:focus {
   --tw-ring-color: white !important;
 }
 
-.w-fit{
+.w-fit {
   width: 100% !important;
 }
 
-[data-testid = "flowbite-tooltip"]{
+[data-testid="flowbite-tooltip"] {
   width: fit-content !important;
+}
+
+.image-gallery {
+  width: auto;
+  height: auto;
+  object-fit: fill;
 }
