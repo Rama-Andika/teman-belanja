@@ -5,14 +5,17 @@ import { keranjang } from "../data/dummy";
 import { useEffect } from "react";
 import { useState } from "react";
 import ApiPayment from "../api/ApiPayment";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+  const location = useLocation();
   const [id, setId] = useState([]);
   const [qty, setQty] = useState([]);
   const [subTotal, setSubTotal] = useState(new Array(keranjang.length).fill(0));
   const [datas, setDatas] = useState(keranjang);
 
   const [token, setToken] = useState("");
+  const navigate = useNavigate();
 
   let grandSubTotal = 0;
   const nominal = 10000000;
@@ -28,7 +31,7 @@ const Checkout = () => {
   }
 
   const getToken = async () => {
-    await ApiPayment.post()
+    await ApiPayment.post(`/32`)
       .then((response) => {
         setToken(response.data.data);
       })
@@ -56,14 +59,14 @@ const Checkout = () => {
           console.log(result);
         },
         onClose: function () {
-          /* You may add your own implementation here */
-          alert("you closed the popup without finishing the payment");
+          navigate(location.pathname)
         },
       });
     }
   };
 
   useEffect(() => {
+    console.log(location.pathname)
     getToken();
 
     const subTotal_copy = [...subTotal];
@@ -145,120 +148,116 @@ const Checkout = () => {
                 </Table.Head>
                 <Table.Body className="divide-y">
                   <>
-                    {datas.map((data, i) => (
-                      <>
-                        {id.map(
-                          (item) =>
-                            data.id === item && (
-                              <Table.Row
-                                key={i}
-                                className="bg-white dark:border-gray-700 dark:bg-gray-800"
-                              >
-                                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                                  <div className="flex gap-2">
-                                    <div className="w-[100px]">
-                                      <img
-                                        alt={unsplashimg.alt}
-                                        src={unsplashimg.src}
-                                        className="object-cover"
-                                      />
-                                    </div>
-                                    <div>{data.name}</div>
+                    {datas.map((data) =>
+                      id.map(
+                        (item, i) =>
+                          data.id === item && (
+                            <Table.Row
+                              key={i}
+                              className="bg-white dark:border-gray-700 dark:bg-gray-800"
+                            >
+                              <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                                <div className="flex gap-2">
+                                  <div className="w-[100px]">
+                                    <img
+                                      alt={unsplashimg.alt}
+                                      src={unsplashimg.src}
+                                      className="object-cover"
+                                    />
                                   </div>
-                                </Table.Cell>
-                                <Table.Cell>
-                                  <div>Rp.{numberWithCommas(data.price)}</div>
-                                </Table.Cell>
-                                <Table.Cell>
-                                  <div className="text-center">
-                                    <div className="">{qty[i]}</div>
-                                  </div>
-                                </Table.Cell>
-                                <Table.Cell>
-                                  <div>Rp.{numberWithCommas(subTotal[i])}</div>
-                                  <div className="hidden">
-                                    {" "}
-                                    {(grandSubTotal += subTotal[i])}
-                                  </div>
-                                </Table.Cell>
-                              </Table.Row>
-                            )
-                        )}
-                      </>
-                    ))}
+                                  <div>{data.name}</div>
+                                </div>
+                              </Table.Cell>
+                              <Table.Cell>
+                                <div>Rp.{numberWithCommas(data.price)}</div>
+                              </Table.Cell>
+                              <Table.Cell>
+                                <div className="text-center">
+                                  <div className="">{qty[i]}</div>
+                                </div>
+                              </Table.Cell>
+                              <Table.Cell>
+                                <div>Rp.{numberWithCommas(subTotal[i])}</div>
+                                <div className="hidden">
+                                  {" "}
+                                  {(grandSubTotal += subTotal[i])}
+                                </div>
+                              </Table.Cell>
+                            </Table.Row>
+                          )
+                      )
+                    )}
                   </>
                 </Table.Body>
               </Table>
             </div>
             <div>
-              {datas.map((data, i) => (
-                <>
-                  {id.map(
-                    (item) =>
-                      data.id === item && (
-                        <div className="max-[749px]:block min-[750px]:hidden p-3 bg-white rounded-sm shadow-sm">
-                          <div className="grid grid-cols-2 gap-5">
-                            <div>
-                              <img
-                                alt={unsplashimg.alt}
-                                src={unsplashimg.src}
-                              />
-                            </div>
-                            <div className="flex flex-col font-roboto">
-                              <div className="w-full overflow-ellipsis overflow-hidden">
-                                {data.name}
-                              </div>
-                              <div className="text-[#219ebc]">
-                                Rp.{numberWithCommas(data.price)}
-                              </div>
-                              <div className="text-[#219ebc] hidden">
-                                {nominal}
-                              </div>
-                            </div>
+              {datas.map((data) =>
+                id.map(
+                  (item, i) =>
+                    data.id === item && (
+                      <div
+                        key={i}
+                        className="max-[749px]:block min-[750px]:hidden p-3 bg-white rounded-sm shadow-sm"
+                      >
+                        <div className="grid grid-cols-2 gap-5">
+                          <div>
+                            <img alt={unsplashimg.alt} src={unsplashimg.src} />
                           </div>
-                          <div className="flex justify-between items-center mt-7">
-                            <div className="max-[363px]:text-sm max-[334px]:text-xs">
-                              <div className="">1</div>
+                          <div className="flex flex-col font-roboto">
+                            <div className="w-full overflow-ellipsis overflow-hidden">
+                              {data.name}
                             </div>
-                            <div className="text-red-400">
-                              Rp.{numberWithCommas(nominal)}
+                            <div className="text-[#219ebc]">
+                              Rp.{numberWithCommas(data.price)}
+                            </div>
+                            <div className="text-[#219ebc] hidden">
+                              {nominal}
                             </div>
                           </div>
                         </div>
-                      )
-                  )}
-                </>
-              ))}
+                        <div className="flex justify-between items-center mt-7">
+                          <div className="max-[363px]:text-sm max-[334px]:text-xs">
+                            <div className="">1</div>
+                          </div>
+                          <div className="text-red-400">
+                            Rp.{numberWithCommas(nominal)}
+                          </div>
+                        </div>
+                      </div>
+                    )
+                )
+              )}
             </div>
           </div>
         </div>
         <div className=" mt-10">
-          <div className="flex flex-col max-[528px]:items-end justify-end items-end w-full bg-white p-5  text-[12px] font-semibold">
-            <div className="flex gap-5">
+          <div className="flex flex-col justify-end min-[375px]:items-end w-full bg-white p-5 text-[12px] font-semibold">
+            <div className="flex gap-5 justify-center max-[320px]:justify-between">
               <div className="">Sub Total</div>
-              <div className="">:</div>
-              <div className="max-[375px]:w-[150px] w-[178.94px] text-right">
+
+              <div className="max-[375px]:w-[150px] w-[178.94px] text-right text-slate-400 text-[14px]">
                 Rp.{numberWithCommas(grandSubTotal)}
               </div>
             </div>
-            <div className="flex gap-5 mt-2">
-              <div className="">Total ongkos kirim</div>
-              <div className="">:</div>
-              <div className="max-[375px]:w-[150px] w-[178.94px] text-right">
-                Rp.{numberWithCommas(10000)}
+            <div className="flex max-[320px]:justify-between max-[320px]:items-end max-[320px]:gap-1 gap-5 mt-2 justify-center">
+              <div className="">Ongkos kirim</div>
+
+              <div className="max-[375px]:w-[150px] w-[178.94px] text-right text-slate-400 text-[14px]">
+                Rp.{numberWithCommas(200000)}
               </div>
             </div>
-            <div className="flex gap-5 items-center">
+            <div className="flex max-[320px]:justify-between gap-5 items-center">
               <div className="">Total</div>
-              <div className="">:</div>
-              <div className="max-[375px]:w-[150px] w-[178.94px] text-[28px] text-[#fa5a96] text-right">
+
+              <div className="max-[375px]:w-[150px] max-[320px]:w-[200px] w-[178.94px] text-[28px] text-[#fa5a96] text-right">
                 Rp.{numberWithCommas(grandSubTotal + 10000)}
               </div>
             </div>
 
             <div
               onClick={onClickPesanan}
-              className="bg-[#fa5a96] py-2 px-5 text-white rounded-sm mt-10 cursor-pointer"
+              className="bg-[#fa5a96] py-2 px-5 text-white rounded-sm mt-10 cursor-pointer text-center"
             >
               Buat Pesanan
             </div>

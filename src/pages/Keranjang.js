@@ -9,7 +9,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 import { toast } from "react-hot-toast";
 
 const Keranjang = () => {
-  const {test, setTest} = useStateContext();
+
   const [id, setId] = useState([]);
   const [qty, setQty] = useState([]);
   const [subTotal, setSubTotal] = useState(new Array(keranjang.length).fill(0));
@@ -341,6 +341,7 @@ const Keranjang = () => {
     const localStorageData = JSON.parse(localStorage.getItem("data"));
 
     if (localStorageId !== null) {
+      // eslint-disable-next-line array-callback-return
       localStorageId.map((data, i) => {
         if (data === null) {
           id_copy[i] = undefined;
@@ -352,6 +353,7 @@ const Keranjang = () => {
     }
 
     if (localStorageQty !== null) {
+      // eslint-disable-next-line array-callback-return
       localStorageQty.map((data, i) => {
         if (data === "") {
           qty_copy[i] = 0;
@@ -362,6 +364,7 @@ const Keranjang = () => {
 
       setQty(qty_copy);
     } else {
+      // eslint-disable-next-line array-callback-return
       data.map((item, i) => {
         qty_copy[i] = item.qty;
       });
@@ -371,6 +374,7 @@ const Keranjang = () => {
     if (localStorageSubTotal !== null) {
       setSubTotal(localStorageSubTotal);
     } else {
+      // eslint-disable-next-line array-callback-return
       data.map((item, i) => {
         subTotal_copy[i] = item.price * item.qty;
       });

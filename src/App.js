@@ -16,6 +16,7 @@ import AccountProfile from "./pages/AccountProfile";
 import AccountAddress from "./pages/AccountAddress";
 import PesananSaya from "./pages/PesananSaya";
 import { Toaster } from "react-hot-toast";
+import ProductBySearch from "./pages/ProductBySearch";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             element={<ProductTerlarisList />}
           />
           <Route path="/category/:kategori" element={<ProductByKategory />} />
+          <Route path="/:search" element={<ProductBySearch />} />
           <Route path="/account/profile" element={<AccountProfile />} />
           <Route path="/account/address" element={<AccountAddress />} />
           <Route path="/user/purchase" element={<PesananSaya />} />

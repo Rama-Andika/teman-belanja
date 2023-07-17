@@ -10,12 +10,20 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { BiHelpCircle } from "react-icons/bi";
 import { TfiWorld } from "react-icons/tfi";
 import { SlBasket } from "react-icons/sl";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useStateContext } from "../contexts/ContextProvider";
+import { useState } from "react";
 
 const NavbarComponent = ({ children }) => {
   let items = 200;
   const { image } = useStateContext();
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  const onSubmitSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?keyword=${search}`);
+  };
 
   return (
     <>
@@ -84,9 +92,7 @@ const NavbarComponent = ({ children }) => {
             className="bg-transparent min-[920px]:mx-28 text-white mt-5"
           >
             <div className="flex items-center">
-              <Link to="/">
-                TEMAN BELANJA
-              </Link>
+              <Link to="/">TEMAN BELANJA</Link>
             </div>
 
             <div className="flex md:order-2 gap-2">
@@ -106,14 +112,22 @@ const NavbarComponent = ({ children }) => {
             </div>
             <Navbar.Collapse className="text-white">
               <div className="relative w-full min-[768px]:w-[500px] min-[1100px]:w-[800px]">
-                <i className="absolute top-[0.13rem] right-[0.13rem] py-2 px-3  bg-[#fa5a96]">
+                <button
+                  type="button"
+                  onClick={onSubmitSearch}
+                  className="absolute top-[0.13rem] right-[0.13rem] py-2 px-3  bg-[#fa5a96]"
+                >
                   <AiOutlineSearch className="text-sm text-white" />
-                </i>
-                <input
-                  className="text-slate-900 ps-8 rounded-sm border border-slate-300 w-full h-[34px] text-sm "
-                  type="text"
-                  placeholder="Cari barang..."
-                />
+                </button>
+                <form onSubmit={onSubmitSearch}>
+                  <input
+                    className="text-slate-900 ps-8 rounded-sm border border-slate-300 w-full h-[34px] text-sm "
+                    type="text"
+                    placeholder="Cari barang..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                </form>
               </div>
             </Navbar.Collapse>
           </Navbar>

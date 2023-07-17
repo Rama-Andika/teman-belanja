@@ -1,4 +1,4 @@
-import { Button, Checkbox, Label, TextInput } from "flowbite-react";
+import {Checkbox, Label, TextInput } from "flowbite-react";
 
 const Login = () => {
   const unsplashimg = {
@@ -7,7 +7,7 @@ const Login = () => {
   };
   return (
     <div
-      className="min-h-screen bg-cover bg-no-repeat bg-center opacity-100 relative"
+      className="min-h-screen bg-cover bg-no-repeat bg-center relative"
       style={{ backgroundImage: `url(${unsplashimg.src})` }}
     >
       <div className="font-roboto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-10 w-1/2 max-[620px]:w-2/3 max-[500px]:w-5/6">
@@ -38,7 +38,12 @@ const Login = () => {
             <Checkbox id="remember" />
             <Label htmlFor="remember">Remember me</Label>
           </div>
-          <Button type="submit">Submit</Button>
+          <button
+            type="submit"
+            className="bg-[#fa5a96] py-2 text-white rounded-sm shadow-sm "
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
