@@ -32,9 +32,9 @@ const BestSelling = () => {
         {array.map((i) => (
           <div key={i}>
             <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-6 grid-cols-2 max-[375px]:grid-cols-1 gap-2">
-              {arrayCategory.map((i) => (
-                <>
-                  {i <= 6 && (
+              {arrayCategory.map(
+                (i) =>
+                  i <= 6 && (
                     <Link key={i} to="/product-terlaris-list">
                       <div className="flex flex-col">
                         <div className="transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] relative">
@@ -52,9 +52,8 @@ const BestSelling = () => {
                         </div>
                       </div>
                     </Link>
-                  )}
-                </>
-              ))}
+                  )
+              )}
             </div>
           </div>
         ))}

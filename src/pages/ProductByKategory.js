@@ -14,7 +14,9 @@ import komputer5 from "../assets/images/5.png";
 import komputer6 from "../assets/images/6.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Rating } from "react-simple-star-rating";
-import P1 from "../assets/images/p1.jpeg"
+import P1 from "../assets/images/p1.jpeg";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { FiFilter } from "react-icons/fi";
 
 function TabPanel(props) {
   const { children, value, index, text, ...other } = props;
@@ -41,6 +43,7 @@ function a11yProps(index) {
 
 const ProductByKategory = () => {
   const { screenSize, setScreenSize } = useStateContext();
+  const [openFilter, setOpenFilter] = useState(true);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -72,7 +75,7 @@ const ProductByKategory = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [openFilter]);
   const [value, setValue] = useState(1);
 
   const handleChange = (event, newValue) => {
@@ -80,7 +83,140 @@ const ProductByKategory = () => {
   };
 
   return (
-    <>
+    <div className="relative">
+      {openFilter && screenSize < 1098 && (
+        <div className="absolute bg-half-transparent w-full h-full z-[999999] transition-all ease-in-out duration-100 ">
+          <div className="bg-white w-[250px] h-full">
+            <div className="bg-slate-300 px-5 font-bold py-2 flex justify-between items-center">
+              <div>Filter</div>
+              <div
+                onClick={() => setOpenFilter(false)}
+                className="cursor-pointer"
+              >
+                <AiOutlineCloseCircle />
+              </div>
+            </div>
+            <div className="ps-5 py-5">
+              <div className="font-semibold text-[14px]">Semua Kategori</div>
+
+              <div className="text-[12px] flex flex-col mt-5 gap-2">
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="kategory"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="kategory" className="cursor-pointer">
+                    Komputer
+                  </label>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="desktop"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="desktop" className="cursor-pointer">
+                    Desktop
+                  </label>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="monitor"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="monitor" className="cursor-pointer">
+                    Monitor
+                  </label>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="komponen"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="komponen" className="cursor-pointer">
+                    Komponen Desktop dan Laptop
+                  </label>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="penyimpanan"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="penyimpanan" className="cursor-pointer">
+                    Penyimpanan Data
+                  </label>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="network"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="network" className="cursor-pointer">
+                    Komponen Network
+                  </label>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                  <input
+                    id="software"
+                    type="checkbox"
+                    className="border border-slate-300 rounded-full"
+                  />
+                  <label htmlFor="software" className="cursor-pointer">
+                    Software
+                  </label>
+                </div>
+
+                <div className="w-full overflow-ellipsis overflow-hidden text-[14px] font-semibold mt-2">
+                  Batas Harga
+                </div>
+                <div className="flex gap-2 justify-between items-center pe-5 h-[20px] mt-5">
+                  <div>
+                    <input
+                      type="number"
+                      placeholder="Rp.MIN"
+                      className="w-full text-[12px] h-full border border-slate-300"
+                    />
+                  </div>
+                  <div className="text-center text-[20px] text-slate-400">
+                    -
+                  </div>
+                  <div>
+                    <input
+                      type="number"
+                      placeholder="Rp.MAX"
+                      className="w-full text-[12px] h-full border border-slate-300"
+                    />
+                  </div>
+                </div>
+                <div className="w-full overflow-ellipsis overflow-hidden text-[14px] mt-10 text-white pe-5 flex justify-end gap-2">
+                  <div>
+                    <button
+                      type="button"
+                      className="bg-white text-black border border-[#fa5a96] px-4 py-2 w-full rounded-sm shadow-sm text-center"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      onClick={() => setOpenFilter(false)}
+                      type="button"
+                      className="bg-[#fa5a96] px-4 py-2 w-full rounded-sm shadow-sm"
+                    >
+                      Terapkan
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <NavbarComponent>
         <div className="mt-5 font-roboto">
           <div>
@@ -239,30 +375,79 @@ const ProductByKategory = () => {
                   <div className="font-bold">Semua Kategori</div>
                 </div>
 
-                <div className="text-[14px] flex flex-col mt-5 gap-2 font-semibold">
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Komputer & Aksesoris
+                <div className="text-[14px] flex flex-col mt-5 gap-2">
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="kategory"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="kategory" className="cursor-pointer">
+                      Komputer
+                    </label>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Desktop
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="desktop"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="desktop" className="cursor-pointer">
+                      Desktop
+                    </label>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Monitor
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="monitor"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="monitor" className="cursor-pointer">
+                      Monitor
+                    </label>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Komponen Dekstop & Laptop
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="komponen"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="komponen" className="cursor-pointer">
+                      Komponen Desktop dan Laptop
+                    </label>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Penyimpanan Data
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="penyimpanan"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="penyimpanan" className="cursor-pointer">
+                      Penyimpanan Data
+                    </label>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Komponen Network
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="network"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="network" className="cursor-pointer">
+                      Komponen Network
+                    </label>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden">
-                    Software
+                  <div className="w-full overflow-ellipsis overflow-hidden flex items-center gap-2">
+                    <input
+                      id="software"
+                      type="checkbox"
+                      className="border border-slate-300 rounded-full"
+                    />
+                    <label htmlFor="software" className="cursor-pointer">
+                      Software
+                    </label>
                   </div>
 
-                  <div className="w-full overflow-ellipsis overflow-hidden text-[16px] mt-2">
+                  <div className="w-full overflow-ellipsis overflow-hidden text-[14px] font-semibold mt-2">
                     Batas Harga
                   </div>
                   <div className="flex gap-2 justify-between items-center pe-5 h-[20px] mt-5">
@@ -284,12 +469,18 @@ const ProductByKategory = () => {
                       />
                     </div>
                   </div>
-                  <div className="w-full overflow-ellipsis overflow-hidden text-[14px] mt-2 text-white pe-5">
+                  <div className="w-full overflow-ellipsis overflow-hidden text-[14px] mt-10 text-white pe-5">
                     <button
                       type="button"
-                      className="bg-[#fa5a96] px-4 py-1 w-full rounded-sm shadow-sm"
+                      className="bg-[#fa5a96] px-4 py-2 w-full rounded-sm shadow-sm"
                     >
-                      TERAPKAN
+                      Terapkan
+                    </button>
+                    <button
+                      type="button"
+                      className="bg-white mt-2 text-black border border-[#fa5a96] px-4 py-2 w-full rounded-sm shadow-sm text-center"
+                    >
+                      Reset
                     </button>
                   </div>
                 </div>
@@ -631,11 +822,24 @@ const ProductByKategory = () => {
                 </TabPanel>
               </div>
             </div>
+            <div className="mt-10 sticky bottom-5">
+              <div className="flex justify-end">
+                <div
+                  onClick={() => setOpenFilter(true)}
+                  className="bg-[#fa5a96] py-2 px-3 rounded-full text-white flex items-center gap-1 cursor-pointer"
+                >
+                  <div className="">
+                    <FiFilter />
+                  </div>
+                  <div className="text-[12px]">Filter</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </NavbarComponent>
       <Footer className=" mt-10 border-t-4 border-[#fa5a96]" />
-    </>
+    </div>
   );
 };
 

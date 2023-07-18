@@ -31,7 +31,7 @@ const Checkout = () => {
   }
 
   const getToken = async () => {
-    await ApiPayment.post(`/32`)
+    await ApiPayment.post(`/33`)
       .then((response) => {
         setToken(response.data.data);
       })

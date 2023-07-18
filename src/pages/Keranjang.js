@@ -9,7 +9,6 @@ import { useStateContext } from "../contexts/ContextProvider";
 import { toast } from "react-hot-toast";
 
 const Keranjang = () => {
-
   const [id, setId] = useState([]);
   const [qty, setQty] = useState([]);
   const [subTotal, setSubTotal] = useState(new Array(keranjang.length).fill(0));
@@ -429,94 +428,91 @@ const Keranjang = () => {
                   </Table.Head>
                   <Table.Body className="divide-y">
                     {data.map((item, i) => (
-                      <>
-                        {console.log(localStorage.getItem("grand_total"))}
-                        <Table.Row
-                          key={i}
-                          className="bg-white dark:border-gray-700 dark:bg-gray-800"
-                        >
-                          <Table.Cell className="p-4">
-                            <Checkbox
-                              name="checkbox_item"
-                              value={item.id}
-                              onChange={(e) => onChange(e, i)}
-                              checked={id[i] !== undefined ? true : false}
-                            />
-                          </Table.Cell>
-                          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                            <div className="flex gap-2">
-                              <div className="w-[100px]">
-                                <img
-                                  alt={unsplashimg.alt}
-                                  src={unsplashimg.src}
-                                  className="object-cover"
-                                />
-                              </div>
-                              <div>{item.name}</div>
-                            </div>
-                          </Table.Cell>
-                          <Table.Cell>
-                            <div>Rp.{numberWithCommas(item.price)}</div>
-                            <div className="hidden">{nominal}</div>
-                          </Table.Cell>
-                          <Table.Cell>
-                            <div className="flex items-center max-[751px]:mt-10 max-[363px]:text-sm max-[334px]:text-xs">
-                              <button
-                                onClick={() => onClickMinus(i, item)}
-                                className="py-0 h-8 px-2 border border-slate-300 rounded-sm"
-                              >
-                                -
-                              </button>
-
-                              <input
-                                type="number"
-                                min="0"
-                                className="text-center  border-slate-300"
-                                value={qty[i]}
-                                style={{ width: "60px", height: "30px" }}
-                                onChange={(e) => onChangeQty(e, i, item)}
+                      <Table.Row
+                        key={i}
+                        className="bg-white dark:border-gray-700 dark:bg-gray-800"
+                      >
+                        <Table.Cell className="p-4">
+                          <Checkbox
+                            name="checkbox_item"
+                            value={item.id}
+                            onChange={(e) => onChange(e, i)}
+                            checked={id[i] !== undefined ? true : false}
+                          />
+                        </Table.Cell>
+                        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                          <div className="flex gap-2">
+                            <div className="w-[100px]">
+                              <img
+                                alt={unsplashimg.alt}
+                                src={unsplashimg.src}
+                                className="object-cover"
                               />
-
-                              <button
-                                onClick={() => onClickPlus(i, item)}
-                                className="py-0 h-8 px-2 border border-slate-300 rounded-sm"
-                              >
-                                +
-                              </button>
                             </div>
-                          </Table.Cell>
-                          <Table.Cell>
-                            <div>Rp.{numberWithCommas(subTotal[i])}</div>
-                          </Table.Cell>
-                          <Table.Cell>
-                            {id[i] !== undefined ? (
-                              <button
-                                type="button"
-                                onClick={() => deleteItem(i)}
-                                className="font-medium text-cyan-600 hover:underline dark:text-cyan-500 bg-transparent"
-                              >
-                                <p>Hapus</p>
-                              </button>
-                            ) : (
-                              <button
-                                type="button"
-                                onClick={() => deleteItem(i)}
-                                className="font-medium text-slate-400 dark:text-cyan-500 bg-transparent cursor-not-allowed"
-                                disabled
-                              >
-                                <p>Hapus</p>
-                              </button>
-                            )}
-                          </Table.Cell>
-                        </Table.Row>
-                      </>
+                            <div>{item.name}</div>
+                          </div>
+                        </Table.Cell>
+                        <Table.Cell>
+                          <div>Rp.{numberWithCommas(item.price)}</div>
+                          <div className="hidden">{nominal}</div>
+                        </Table.Cell>
+                        <Table.Cell>
+                          <div className="flex items-center max-[751px]:mt-10 max-[363px]:text-sm max-[334px]:text-xs">
+                            <button
+                              onClick={() => onClickMinus(i, item)}
+                              className="py-0 h-8 px-2 border border-slate-300 rounded-sm"
+                            >
+                              -
+                            </button>
+
+                            <input
+                              type="number"
+                              min="0"
+                              className="text-center  border-slate-300"
+                              value={qty[i]}
+                              style={{ width: "60px", height: "30px" }}
+                              onChange={(e) => onChangeQty(e, i, item)}
+                            />
+
+                            <button
+                              onClick={() => onClickPlus(i, item)}
+                              className="py-0 h-8 px-2 border border-slate-300 rounded-sm"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </Table.Cell>
+                        <Table.Cell>
+                          <div>Rp.{numberWithCommas(subTotal[i])}</div>
+                        </Table.Cell>
+                        <Table.Cell>
+                          {id[i] !== undefined ? (
+                            <button
+                              type="button"
+                              onClick={() => deleteItem(i)}
+                              className="font-medium text-cyan-600 hover:underline dark:text-cyan-500 bg-transparent"
+                            >
+                              <p>Hapus</p>
+                            </button>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => deleteItem(i)}
+                              className="font-medium text-slate-400 dark:text-cyan-500 bg-transparent cursor-not-allowed"
+                              disabled
+                            >
+                              <p>Hapus</p>
+                            </button>
+                          )}
+                        </Table.Cell>
+                      </Table.Row>
                     ))}
                   </Table.Body>
                 </Table>
               </div>
               <div>
                 {data.map((item, i) => (
-                  <div className="max-[749px]:block min-[750px]:hidden p-3 bg-white rounded-sm shadow-sm">
+                  <div key={i} className="max-[749px]:block min-[750px]:hidden p-3 bg-white rounded-sm shadow-sm">
                     <div className="grid grid-cols-2 gap-10">
                       <div className="flex justify-start items-center gap-1">
                         <Checkbox

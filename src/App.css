@@ -72,6 +72,10 @@ input[type="text"]:focus {
   --tw-ring-color: white !important;
 }
 
+input[type="email"]:focus {
+  --tw-ring-color: white !important;
+}
+
 input[type="checkbox"]:checked {
   background-color: #fa5a96 !important;
 }
