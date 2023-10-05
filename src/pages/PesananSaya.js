@@ -336,50 +336,9 @@ const PesananSaya = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white mt-2 p-5">
-                  <div
-                    className={`flex pt-5 ${
-                      screenSize <= 634
-                        ? "flex-col gap-2"
-                        : "flex-row justify-between items-center"
-                    }`}
-                  >
-                    <div
-                      className="flex gap-2"
-                    >
-                      <div
-                        style={{ backgroundImage: `url(${ImagePesanan})` }}
-                        className="w-[80px] h-[80px] bg-center bg-cover"
-                      ></div>
-                      <div className="flex flex-col items-end">
-                        <div className="w-[200px] min-[470px]:w-[300px] overflow-ellipsis overflow-hidden max-[470px]:text-[12px]">
-                          Cosrx Low pH Good Morning gel Cleanserffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-                        </div>
-                        <div className="w-full overflow-ellipsis overflow-hidden">
-                          x1
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-[14px]">Rp.10.000.000</div>
-                  </div>
-                  <div className="flex justify-end">
-                    <div className="flex gap-2 items-center">
-                      <div className="text-[14px]">Total Pesanan</div>
-                      <div className="text-[14px]">:</div>
-                      <div className="text-[24px] text-[#fa5a96]">
-                        Rp. 10.000.000
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-end mt-5">
-                    <div>
-                      <button className="bg-[#fa5a96] py-[8px] px-[10px] text-white rounded-sm shadow-sm">
-                        Pesanan Diterima
-                      </button>
-                    </div>
-                  </div>
-                </div>
+               
               </TabPanel>
+              
             </div>
           </div>
         </div>

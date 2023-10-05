@@ -6,12 +6,13 @@ const initialState = {};
 
 export const ContextProvider = ({ children }) => {
   const [screenSize, setScreenSize] = useState(undefined);
+  const [active, setActive] = useState(false);
   const [image, setImage] = useState();
   const [test, setTest] = useState()
   const [temp, setTemp] = useState("")
 
   return (
-    <StateContext.Provider value={{ screenSize, setScreenSize, initialState, image, setImage, test, setTest, temp, setTemp }}>
+    <StateContext.Provider value={{ screenSize, setScreenSize, initialState, image, setImage, test, setTest, temp, setTemp, active, setActive }}>
       {children}
     </StateContext.Provider>
   );

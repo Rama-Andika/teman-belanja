@@ -38,7 +38,7 @@ const ProductComponent = () => {
                               src={require(`../assets/images/rekomendasi${i}.jpeg`)}
                               className="object-cover h-[180px]"
                             />
-                            <div className="w-full  text-left max-[434px]:text-sm overflow-ellipsis overflow-hidden">
+                            <div className="w-full text-left max-[434px]:text-sm overflow-ellipsis overflow-hidden">
                               Nescafe Coffee
                             </div>
                             <div className="text-[#fa5a96] text-left flex justify-between items-center pb-2">

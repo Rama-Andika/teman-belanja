@@ -1,37 +1,67 @@
 import CarouselComponent from "./CarouselComponent";
 import Eletronik from "../assets/images/elektronik.png";
 import Laptop from "../assets/images/laptop.png";
-import Gitar from "../assets/images/gitar.png";
-import Handphone from "../assets/images/handphone.png";
-import JamTangan from "../assets/images/jam_tangan.png";
-import KacaMata from "../assets/images/kaca_mata.png";
-import Kesehatan from "../assets/images/kesehatan.png";
-import PakaianPria from "../assets/images/pakaian_pria.png";
-import Sepatu from "../assets/images/sepatu.png";
-import Tas from "../assets/images/tas.png";
-import Makanan from "../assets/images/makanan.png";
-import Perawatan from "../assets/images/perawatan.png";
-import Rumah from "../assets/images/rumah.png";
-import PakaianWanita from "../assets/images/pakaianWanita.png";
-import PakaianMuslim from "../assets/images/pakaianMuslim.png";
-import IbuBayi from "../assets/images/ibuBayi.png";
-import PakaianBayi from "../assets/images/pakaianBayi.png";
-import sepatuWanita from "../assets/images/sepatuWanita.png";
-import TasWanita from "../assets/images/tasWanita.png";
-import Otomotif from "../assets/images/otomotif.png";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 
 const CategoryComponent = () => {
-  
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [setMaxSlide] = useState(0);
+  const next = () => {
+    setCurrentSlide((prev) => prev + 1);
+  };
+
+  const prev = () => {
+    setCurrentSlide((prev) => prev - 11);
+  };
+
+  const updateCurrentSlide = (index) => {
+    setMaxSlide(index);
+    if (currentSlide !== index) {
+      setCurrentSlide(index);
+    }
+  };
   return (
     <>
-      <div className="mt-5 border bg-white rounded-sm  font-roboto text-[14px] ">
-        <div className="mb-3 p-5">
-          <p className="max-[252px]:text-[10px] max-[501px]:text-lg min-[760px]:text-lg">
-            KATEGORI
-          </p>
+      <div className="mt-[30px] bg-white rounded-sm font-quicksand text-[14px] ">
+        <div className="flex items-center justify-between mb-[30px] max-[414px]:flex-col max-[414px]:items-start max-[414px]:justify-normal max-[414px]:gap-2 ">
+          <div className="flex items-center gap-[37px]">
+            <div className="max-[252px]:text-[12px] min-[760px]:text-[32px] font-bold">
+              Shop by Categories
+            </div>
+            <div className="text-[10px] min-[760px]:text-[16px] font-[400] flex items-center gap-[17px]">
+              <div>All Categories</div>
+              <div>
+                <img
+                  className="w-[5px] min-[760px]:w-[8px]"
+                  src={require("../assets/images/arrowRightBlack.png")}
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <div onClick={prev}>
+              <img src={require("../assets/images/prev.png")} alt="" />
+            </div>
+            <div onClick={next}>
+              {currentSlide !== 0 ? (
+                <img
+                  className="scale-x-[-1]"
+                  src={require("../assets/images/prev.png")}
+                  alt=""
+                />
+              ) : (
+                <img
+                  className=""
+                  src={require("../assets/images/nextSelected.png")}
+                  alt=""
+                />
+              )}
+            </div>
+          </div>
         </div>
+
         <CarouselComponent
           className="group"
           showArrows={true}
@@ -39,12 +69,103 @@ const CategoryComponent = () => {
           infiniteLoop={false}
           showIndicators={false}
           swipeable={false}
-          
+          externalIcon={true}
+          selectedItem={currentSlide}
+          onChange={updateCurrentSlide}
         >
-          <div>
-            <div className="overflow-x-auto overflow-y-hidden">
-              <div className="w-[1677px] grid grid-cols-10 ">
-                <Link to="/category/elektronik">
+          <div className="overflow-y-hidden overflow-x-auto">
+            <div className="max-[1384px]:flex max-[1384px]:justify-between grid grid-cols-8 gap-2 font-bold text-[16px]">
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/sembako.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Makanan</div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/iconMinuman.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Minuman</div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/iconMakanan.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Makanan</div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/iconPeralatan.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Peralatan</div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/Jamiu.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <div className="h-[48px] overflow-hidden overflow-ellipsis">
+                    Jamu & Obat Tradisional
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/Buah.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Buah</div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/iconSayuran.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Sayuran</div>
+              </div>
+              <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
+                <div className="w-[80px]">
+                  <img
+                    className="h-[80px]"
+                    src={require("../assets/images/Kopi.png")}
+                    alt=""
+                  />
+                </div>
+                <div className="h-[48px] overflow-hidden overflow-ellipsis">Kopi</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-full">
+            <div className="overflow-x-auto overflow-y-hidden h-full">
+              <div className="w-[1293px] grid grid-cols-10">
+                <Link to="/elektronik">
                   <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
                     <img
                       alt=""
@@ -65,186 +186,6 @@ const CategoryComponent = () => {
                   />
                   <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
                     Komputer & aksesoris
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Handphone}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Handphone & Aksesoris
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={PakaianPria}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Pakaian Pria
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Sepatu}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Sepatu Pria
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Tas}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Tas Pria
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={KacaMata}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Aksesoris Fashion
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={JamTangan}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Jam Tangan
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Kesehatan}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Kesehatan
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Gitar}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Hobi & Koleksi
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Makanan}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Makanan & Minuman
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Perawatan}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Perawatan & Kecantikan
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Rumah}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Perlengkapan Rumah
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={PakaianWanita}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Pakaian Wanita
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={PakaianBayi}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Fashion Bayi & Anak
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={PakaianMuslim}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Fashion Muslim
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={IbuBayi}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Ibu & Bayi
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={sepatuWanita}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Sepatu Wanita
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={TasWanita}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Tas Wanita
-                  </div>
-                </div>
-                <div className=" transition-all hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-lg border border-slate-100 h-[150px] ">
-                  <img
-                    alt=""
-                    src={Otomotif}
-                    className=" object-cover object-center h-[88.28px] category-image"
-                  />
-                  <div className="w-full overflow-ellipsis overflow-hidden px-3 py-0">
-                    Otomotif
                   </div>
                 </div>
               </div>
@@ -281,6 +222,42 @@ const CategoryComponent = () => {
             </div>
           </div>
         </CarouselComponent>
+
+        <div className="grid grid-cols-3 max-[861px]:grid-cols-2 max-[488px]:grid-cols-1 gap-2 mt-[30px]">
+          <div className="rounded-sm bg-[#F0E8D5] h-[250px] relative">
+            <div className="flex flex-col gap-5 absolute top-[50px] left-[28px] z-50">
+              <div className="font-bold w-[250px] h-[100px] text-[24px] max-[1170px]:text-[18px] overflow-hidden overflow-ellipsis">Produk harian yang siap diantar ke rumah anda</div>
+              <div><button className="rounded-sm bg-[#3BB77E] py-1 px-3 text-white">Shop Now</button></div>
+            </div>
+            <img
+              className="absolute bottom-0 right-0"
+              src={require("../assets/images/bengkuang.png")}
+              alt=""
+            />
+          </div>
+          <div className="rounded-sm bg-[#F3E8E8] h-[250px] relative">
+            <div className="flex flex-col gap-5 absolute top-[50px] left-[28px] z-50">
+              <div className="font-bold w-[250px] h-[100px] text-[24px] max-[1170px]:text-[18px] overflow-hidden overflow-ellipsis">Minuman segar yang siap diantar ke rumah anda</div>
+              <div><button className="rounded-sm bg-[#3BB77E] py-1 px-3 text-white">Shop Now</button></div>
+            </div>
+            <img
+              className="absolute bottom-0 right-0 h-[156.13px]"
+              src={require("../assets/images/milk.png")}
+              alt=""
+            />
+          </div>
+          <div className="rounded-sm bg-[#E7EAF3] h-[250px] relative">
+            <div className="flex flex-col gap-5 absolute top-[50px] left-[28px] z-50">
+              <div className="font-bold w-[250px] h-[100px] text-[24px] max-[1170px]:text-[18px] overflow-hidden overflow-ellipsis">Produk harian yang siap diantar ke rumah anda</div>
+              <div><button className="rounded-sm bg-[#3BB77E] py-1 px-3 text-white">Shop Now</button></div>
+            </div>
+            <img
+              className="absolute bottom-0 right-0"
+              src={require("../assets/images/sayur.png")}
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </>
   );

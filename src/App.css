@@ -5,10 +5,12 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type="number"] {
+input[type=number] { 
   -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0; 
 }
+
 
 .category-image {
   width: 83.24px !important;
@@ -64,6 +66,12 @@ input[type="number"] {
   border: 1px solid rgb(203 213 225);
 }
 
+select:focus {
+  outline: none !important;
+  border: 1px solid #fa5a96;
+  box-shadow: 0 0 1px #719ece;
+}
+
 input[type="number"]:focus {
   --tw-ring-color: white !important;
 }
@@ -93,7 +101,7 @@ textarea:focus {
 }
 
 [data-testid="flowbite-tooltip"] {
-  width: fit-content !important;
+  width: 100% !important;
 }
 
 .image-gallery {
@@ -101,3 +109,10 @@ textarea:focus {
   height: auto;
   object-fit: fill;
 }
+
+select {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important; 
+}
+
+
