@@ -24,7 +24,7 @@ const Home = () => {
             <img
               alt="coffee"
               src={require("../assets/images/home.png")}
-              className="object-cover"
+              className="object-cover w-full"
             />
             <div className="absolute w-[727px] h-[234px] left-[57px] top-[63px] font-bold text-[68px] max-[1461px]:text-[30px] max-[1461px]:w-[522px] max-[1212px]:hidden leading-[78px] overflow-hidden overflow-ellipsis">
               Subscribe dan dapatkan notifikasi harga terbaik

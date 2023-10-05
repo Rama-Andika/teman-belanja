@@ -24,8 +24,8 @@ const CategoryComponent = () => {
   return (
     <>
       <div className="mt-[30px] bg-white rounded-sm font-quicksand text-[14px] ">
-        <div className="flex items-center justify-between mb-[30px] max-[414px]:flex-col max-[414px]:items-start max-[414px]:justify-normal max-[414px]:gap-2 ">
-          <div className="flex items-center gap-[37px]">
+        <div className="flex items-center justify-between mb-[30px]  ">
+          <div className="flex items-center gap-[37px] max-[428px]:hidden ">
             <div className="max-[252px]:text-[12px] min-[760px]:text-[32px] font-bold">
               Shop by Categories
             </div>
@@ -40,11 +40,46 @@ const CategoryComponent = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <div onClick={prev}>
+          <div className="max-[428px]:block min-[429px]:hidden max-[252px]:text-[12px] min-[760px]:text-[32px] font-bold">
+              Shop by Categories
+            </div>
+            <div className="max-[428px]:flex min-[429px]:hidden text-[10px] min-[760px]:text-[16px] font-[400] flex items-center gap-[17px]">
+              <div>All Categories</div>
+              <div>
+                <img
+                  className="w-[5px] min-[760px]:w-[8px]"
+                  src={require("../assets/images/arrowRightBlack.png")}
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="hidden items-center gap-2 min-[429px]:flex">
+            <div onClick={prev} className="max-[429px]:w-[30px] max-[429px]:h-[30px]">
               <img src={require("../assets/images/prev.png")} alt="" />
             </div>
-            <div onClick={next}>
+            <div onClick={next} className="max-[429px]:w-[30px] max-[429px]:h-[30px]">
+              {currentSlide !== 0 ? (
+                <img
+                  className="scale-x-[-1]"
+                  src={require("../assets/images/prev.png")}
+                  alt=""
+                />
+              ) : (
+                <img
+                  className=""
+                  src={require("../assets/images/nextSelected.png")}
+                  alt=""
+                />
+              )}
+            </div>
+          </div>         
+        </div>
+        <div className="flex items-center justify-end gap-2 mb-5 min-[429px]:hidden">
+            <div onClick={prev} className="max-[429px]:w-[30px] max-[429px]:h-[30px]">
+              <img src={require("../assets/images/prev.png")} alt="" />
+            </div>
+            <div onClick={next} className="max-[429px]:w-[30px] max-[429px]:h-[30px]">
               {currentSlide !== 0 ? (
                 <img
                   className="scale-x-[-1]"
@@ -60,7 +95,6 @@ const CategoryComponent = () => {
               )}
             </div>
           </div>
-        </div>
 
         <CarouselComponent
           className="group"

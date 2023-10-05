@@ -177,11 +177,11 @@ const ProductTerlaris = () => {
           <TabPanel value={value} index={0}>
             <div className="bg-white mt-5">
               <div className="grid grid-cols-6 gap-5 max-[1371px]:grid-cols-5 max-[1149px]:grid-cols-4 max-[754px]:grid-cols-3 max-[556px]:grid-cols-2 ">
-                <div className="flex flex-col border relative col-span-2 h-[512px] bg-[#3BB77E] ">
+                <div className="flex flex-col border relative col-span-2 h-[551.77px] bg-[#3BB77E] ">
                   <img
                     src={require("../../assets/images/sayur_op.png")}
                     alt=""
-                    className="h-full object-cover"
+                    className="h-[551.77px] object-cover"
                   />
                   <div className="w-full px-5 absolute top-0 text-white py-7">
                     <div className="text-[45px] h-[202px] overflow-hidden overflow-ellipsis">
@@ -234,7 +234,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[376px]:text-[15px]  text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -249,8 +249,8 @@ const ProductTerlaris = () => {
                     />
                   </div>
                   <div className="text-[12px] pt-[6px]">Terjual 90/100</div>
-                  <div className="pt-[23px]">
-                    <button className="bg-[#3BB77E] text-[14px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
+                  <div className="pt-[23px] pb-3">
+                    <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
                           src={require("../../assets/images/cart.png")}
@@ -293,7 +293,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[376px]:text-[15px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -308,8 +308,8 @@ const ProductTerlaris = () => {
                     />
                   </div>
                   <div className="text-[12px] pt-[6px]">Terjual 90/100</div>
-                  <div className="pt-[23px]">
-                    <button className="bg-[#3BB77E] text-[14px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
+                  <div className="pt-[23px] pb-3">
+                    <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
                           src={require("../../assets/images/cart.png")}
@@ -352,7 +352,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[376px]:text-[15px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -367,8 +367,8 @@ const ProductTerlaris = () => {
                     />
                   </div>
                   <div className="text-[12px] pt-[6px]">Terjual 90/100</div>
-                  <div className="pt-[23px]">
-                    <button className="bg-[#3BB77E] text-[14px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
+                  <div className="pt-[23px] pb-3">
+                    <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
                           src={require("../../assets/images/cart.png")}
@@ -411,7 +411,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[376px]:text-[15px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -426,8 +426,8 @@ const ProductTerlaris = () => {
                     />
                   </div>
                   <div className="text-[12px] pt-[6px]">Terjual 90/100</div>
-                  <div className="pt-[23px]">
-                    <button className="bg-[#3BB77E] text-[14px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
+                  <div className="pt-[23px] pb-3">
+                    <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
                           src={require("../../assets/images/cart.png")}

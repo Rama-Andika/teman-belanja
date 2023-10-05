@@ -5,8 +5,8 @@ const Footer = ({ className }) => {
   return (
     <footer className={className}>
       <div className="mx-3 min-[850px]:mx-16 h-full ">
-        <div className="flex gap-[64.73px] h-full">
-          <div className="h-full">
+        <div className="flex justify-between gap-[64.73px] h-full">
+          <div className="h-full max-[489px]:text-[14px] ">
             <div className="flex items-center">
               <div
                 className="w-[62.69px] h-[72.84px]"
@@ -80,12 +80,12 @@ const Footer = ({ className }) => {
                   Sat
                 </div>
               </div>
-              <div className="max-[1155px]:block min-[1156px]:hidden mt-7">
+              <div className="max-[1155px]:block min-[1156px]:hidden mt-7 ">
                 <div className="font-bold text-[20px] whitespace-nowrap ">
                   App & Pembayaran
                 </div>
                 <div className="flex flex-col gap-2 mt-10">
-                  <div className="text-[14px] w-full overflow-hidden overflow-ellipsis">
+                  <div className="text-[14px] max-[489px]:text-[12px] w-full overflow-hidden overflow-ellipsis">
                     Install Aplikasi Ruang Belanja melalui App Store atau Google
                     Play
                   </div>
@@ -213,7 +213,7 @@ const Footer = ({ className }) => {
             </div>
           </div>
         </div>
-        <div className="text-[16px] mt-32 pb-5 ">
+        <div className="text-[16px] max-[489px]:text-[12px] mt-32 pb-5 ">
           © 2023, <span className="text-[#3BB77E]">Ruang Belanja</span> -
           Belanja Online Kebutuhan Harian
         </div>
