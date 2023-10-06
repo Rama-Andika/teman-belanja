@@ -234,7 +234,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[376px]:text-[15px]  text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px]  text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -293,7 +293,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[376px]:text-[15px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -352,7 +352,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[376px]:text-[15px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -411,7 +411,7 @@ const ProductTerlaris = () => {
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[376px]:text-[15px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
