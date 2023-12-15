@@ -84,9 +84,9 @@ input[type="email"]:focus {
   --tw-ring-color: white !important;
 }
 
-input[type="checkbox"]:checked {
+/* input[type="checkbox"]:checked {
   background-color: #fa5a96 !important;
-}
+} */
 
 input[type="checkbox"]:focus {
   --tw-ring-color: white !important;
@@ -105,14 +105,18 @@ textarea:focus {
 }
 
 .image-gallery {
-  width: auto;
-  height: auto;
-  object-fit: fill;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
 }
+
+
 
 select {
     padding-top: 0rem !important;
     padding-bottom: 0rem !important; 
 }
+
+
 
 

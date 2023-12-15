@@ -93,13 +93,13 @@ const Footer = ({ className }) => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-4 max-[1521px]:grid-cols-3 max-[1366px]:grid-cols-2 gap-[60px] max-[650px]:hidden min-[651px]:grid ">
-            <div>
+          <div className="grid grid-cols-12 max-[1521px]:grid-cols-3 max-[1366px]:grid-cols-2 gap-[64.73px] max-[650px]:hidden min-[651px]:grid ">
+            <div className="max-w-[180.35px] w-[180.35px] min-[1522px]:col-span-3">
               <div className="font-bold text-[20px] whitespace-nowrap ">
                 Tentang Kami
               </div>
               <div className="flex flex-col gap-2 mt-10">
-                <div className="text-[14px] w-full whitespace-nowrap overflow-hidden overflow-ellipsis">
+                <div className="text-[14px] whitespace-nowrap overflow-hidden overflow-ellipsis">
                   Tata cara Pengembalian
                 </div>
                 <div className="text-[14px] w-full whitespace-nowrap overflow-hidden overflow-ellipsis">
@@ -122,7 +122,7 @@ const Footer = ({ className }) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="max-w-[180.35px] w-[180.35px] min-[1522px]:col-span-3">
               <div className="font-bold text-[20px] whitespace-nowrap ">
                 Kategori
               </div>
@@ -150,7 +150,7 @@ const Footer = ({ className }) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="max-w-[180.35px] w-[180.35px] min-[1522px]:col-span-3">
               <div className="font-bold text-[20px] whitespace-nowrap ">
                 Akun
               </div>
@@ -175,7 +175,7 @@ const Footer = ({ className }) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="max-w-[180.35px] w-[180.35px] min-[1522px]:col-span-3">
               <div className="font-bold text-[20px] whitespace-nowrap ">
                 Informasi
               </div>

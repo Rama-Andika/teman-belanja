@@ -1,7 +1,7 @@
 import { Tab, Tabs, ThemeProvider, createTheme } from "@mui/material";
-import { useStateContext } from "../../contexts/ContextProvider";
 import { useState } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
+import { useStateContext } from "../../../contexts/ContextProvider";
 
 function TabPanel(props) {
   const { children, value, index, text, ...other } = props;
@@ -179,9 +179,9 @@ const ProductTerlaris = () => {
               <div className="grid grid-cols-6 gap-5 max-[1371px]:grid-cols-5 max-[1149px]:grid-cols-4 max-[754px]:grid-cols-3 max-[556px]:grid-cols-2 ">
                 <div className="flex flex-col border relative col-span-2 h-[551.77px] bg-[#3BB77E] ">
                   <img
-                    src={require("../../assets/images/sayur_op.png")}
+                    src={require("../../../assets/images/sayur_op.png")}
                     alt=""
-                    className="h-[551.77px] object-cover"
+                    className="h-[551.77px] object-cover w-full"
                   />
                   <div className="w-full px-5 absolute top-0 text-white py-7">
                     <div className="text-[45px] h-[202px] overflow-hidden overflow-ellipsis">
@@ -193,7 +193,7 @@ const ProductTerlaris = () => {
                       Lihat Sekarang{" "}
                       <span>
                         <img
-                          src={require("../../assets/images/lineArrowRight.png")}
+                          src={require("../../../assets/images/lineArrowRight.png")}
                           alt=""
                           className="invert-[100%] sepia-[0%] saturate-[100%] hue-rotate-[280deg] brightness-[0%] contrast-[101%]"
                         />
@@ -203,34 +203,36 @@ const ProductTerlaris = () => {
                 </div>
 
                 <div className="flex flex-col border pt-14 px-4 relative">
-                  <div className="absolute top-[20px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
+                  <div className="absolute top-[19px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[12px] whitespace-nowrap">
                       Save 25%
                     </div>
                   </div>
-                  <div>
+                  <div className="pt-[15.98px]">
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                     className="h-[134px] w-full"
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
 
                   <div className="flex flex-col gap-1 mt-[33.97px]">
                     <div className="text-[12px]">Buah</div>
-                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis ">
+                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis pt-[4px] ">
                       Timun Bali Lokal, sudah dicuci dan diwrap plastik
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 pt-[4px]">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                      className=""
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
-                    <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
+                    <div className="text-[12px] pt-[4px] text-[#7E7E7E]">500 gram</div>
                   </div>
-                  <div className="flex flex-col mt-2">
+                  <div className="flex flex-col mt-2 pt-[8px]">
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
@@ -253,7 +255,7 @@ const ProductTerlaris = () => {
                     <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
-                          src={require("../../assets/images/cart.png")}
+                          src={require("../../../assets/images/cart.png")}
                           alt=""
                         />
                       </span>{" "}
@@ -262,38 +264,40 @@ const ProductTerlaris = () => {
                   </div>
                 </div>
                 <div className="flex flex-col border pt-14 px-4 relative">
-                  <div className="absolute top-[20px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
+                  <div className="absolute top-[19px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[12px] whitespace-nowrap">
                       Save 25%
                     </div>
                   </div>
-                  <div>
+                  <div className="pt-[15.98px]">
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                     className="h-[134px] w-full"
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
 
                   <div className="flex flex-col gap-1 mt-[33.97px]">
                     <div className="text-[12px]">Buah</div>
-                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis ">
+                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis pt-[4px] ">
                       Timun Bali Lokal, sudah dicuci dan diwrap plastik
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 pt-[4px]">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                      
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
-                    <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
+                    <div className="text-[12px] pt-[4px] text-[#7E7E7E]">500 gram</div>
                   </div>
-                  <div className="flex flex-col mt-2">
+                  <div className="flex flex-col mt-2 pt-[8px]">
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[468px]:text-[14px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px]  text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -312,7 +316,7 @@ const ProductTerlaris = () => {
                     <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
-                          src={require("../../assets/images/cart.png")}
+                          src={require("../../../assets/images/cart.png")}
                           alt=""
                         />
                       </span>{" "}
@@ -321,38 +325,39 @@ const ProductTerlaris = () => {
                   </div>
                 </div>
                 <div className="flex flex-col border pt-14 px-4 relative">
-                  <div className="absolute top-[20px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
+                  <div className="absolute top-[19px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[12px] whitespace-nowrap">
                       Save 25%
                     </div>
                   </div>
-                  <div>
+                  <div className="pt-[15.98px]">
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                     className="h-[134px] w-full"
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
 
                   <div className="flex flex-col gap-1 mt-[33.97px]">
                     <div className="text-[12px]">Buah</div>
-                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis ">
+                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis pt-[4px] ">
                       Timun Bali Lokal, sudah dicuci dan diwrap plastik
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 pt-[4px]">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
-                    <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
+                    <div className="text-[12px] pt-[4px] text-[#7E7E7E]">500 gram</div>
                   </div>
-                  <div className="flex flex-col mt-2">
+                  <div className="flex flex-col mt-2 pt-[8px]">
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[468px]:text-[14px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px]  text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -371,7 +376,8 @@ const ProductTerlaris = () => {
                     <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
-                          src={require("../../assets/images/cart.png")}
+          
+                          src={require("../../../assets/images/cart.png")}
                           alt=""
                         />
                       </span>{" "}
@@ -380,38 +386,39 @@ const ProductTerlaris = () => {
                   </div>
                 </div>
                 <div className="flex flex-col border pt-14 px-4 relative">
-                  <div className="absolute top-[20px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
+                  <div className="absolute top-[19px] left-0 rounded-r-[30px] bg-[#FD6E6E] w-[82px] h-[32px]">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[12px] whitespace-nowrap">
                       Save 25%
                     </div>
                   </div>
-                  <div>
+                  <div className="pt-[15.98px]">
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                     className="h-[134px] w-full"
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
 
                   <div className="flex flex-col gap-1 mt-[33.97px]">
                     <div className="text-[12px]">Buah</div>
-                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis ">
+                    <div className="font-bold h-[47px] text-[14px] overflow-hidden overflow-ellipsis pt-[4px] ">
                       Timun Bali Lokal, sudah dicuci dan diwrap plastik
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 pt-[4px]">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
-                    <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
+                    <div className="text-[12px] pt-[4px] text-[#7E7E7E]">500 gram</div>
                   </div>
-                  <div className="flex flex-col mt-2">
+                  <div className="flex flex-col mt-2 pt-[8px]">
                     <div className="text-[10px] relative w-fit line-through">
                       Rp. 28.0000
                     </div>
-                    <div className="text-[20px] max-[468px]:text-[14px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                    <div className="text-[20px] max-[468px]:text-[14px]  text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
                       <div className="font-bold">Rp. 25.000.000</div>
                     </div>
                   </div>
@@ -430,7 +437,7 @@ const ProductTerlaris = () => {
                     <button className="bg-[#3BB77E] text-[14px] max-[376px]:text-[10px] text-white font-bold w-full py-2 flex items-center justify-center gap-2">
                       <span>
                         <img
-                          src={require("../../assets/images/cart.png")}
+                          src={require("../../../assets/images/cart.png")}
                           alt=""
                         />
                       </span>{" "}
@@ -438,6 +445,7 @@ const ProductTerlaris = () => {
                     </button>
                   </div>
                 </div>
+                
               </div>
             </div>
           </TabPanel>

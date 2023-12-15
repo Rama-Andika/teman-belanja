@@ -11,7 +11,7 @@ const ProductPromo = () => {
             <div>
               <img
                 className="w-[5px] min-[760px]:w-[8px]"
-                src={require("../../assets/images/arrowRightBlack.png")}
+                src={require("../../../assets/images/arrowRightBlack.png")}
                 alt=""
               />
             </div>
@@ -22,7 +22,7 @@ const ProductPromo = () => {
           <div>
             <img
               className="object-cover w-full"
-              src={require("../../assets/images/promo1.png")}
+              src={require("../../../assets/images/promo1.png")}
               alt=""
             />
 
@@ -105,7 +105,7 @@ const ProductPromo = () => {
                 Seeds of Change Organic Quinoa, Brown, & Red Rice
               </div>
               <div>
-                <img src={require("../../assets/images/rating.png")} alt="" />
+                <img src={require("../../../assets/images/rating.png")} alt="" />
               </div>
               <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
               <div className="flex items-center max-[1444px]:flex-col max-[1444px]:items-start gap-2 mt-2 justify-between">
@@ -122,7 +122,7 @@ const ProductPromo = () => {
                     +{" "}
                     <span>
                       <img
-                        src={require("../../assets/images/cartGreen.png")}
+                        src={require("../../../assets/images/cartGreen.png")}
                         alt=""
                       />
                     </span>
@@ -134,7 +134,7 @@ const ProductPromo = () => {
           <div>
             <img
               className="object-cover w-full"
-              src={require("../../assets/images/promo1.png")}
+              src={require("../../../assets/images/promo1.png")}
               alt=""
             />
 
@@ -217,7 +217,7 @@ const ProductPromo = () => {
                 Seeds of Change Organic Quinoa, Brown, & Red Rice
               </div>
               <div>
-                <img src={require("../../assets/images/rating.png")} alt="" />
+                <img src={require("../../../assets/images/rating.png")} alt="" />
               </div>
               <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
               <div className="flex items-center max-[1444px]:flex-col max-[1444px]:items-start gap-2 mt-2 justify-between">
@@ -234,7 +234,7 @@ const ProductPromo = () => {
                     +{" "}
                     <span>
                       <img
-                        src={require("../../assets/images/cartGreen.png")}
+                        src={require("../../../assets/images/cartGreen.png")}
                         alt=""
                       />
                     </span>
@@ -246,7 +246,7 @@ const ProductPromo = () => {
           <div>
             <img
               className="object-cover w-full"
-              src={require("../../assets/images/promo1.png")}
+              src={require("../../../assets/images/promo1.png")}
               alt=""
             />
 
@@ -329,7 +329,7 @@ const ProductPromo = () => {
                 Seeds of Change Organic Quinoa, Brown, & Red Rice
               </div>
               <div>
-                <img src={require("../../assets/images/rating.png")} alt="" />
+                <img src={require("../../../assets/images/rating.png")} alt="" />
               </div>
               <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
               <div className="flex items-center max-[1444px]:flex-col max-[1444px]:items-start gap-2 mt-2 justify-between">
@@ -346,7 +346,7 @@ const ProductPromo = () => {
                     +{" "}
                     <span>
                       <img
-                        src={require("../../assets/images/cartGreen.png")}
+                        src={require("../../../assets/images/cartGreen.png")}
                         alt=""
                       />
                     </span>
@@ -358,7 +358,7 @@ const ProductPromo = () => {
           <div>
             <img
               className="object-cover w-full"
-              src={require("../../assets/images/promo1.png")}
+              src={require("../../../assets/images/promo1.png")}
               alt=""
             />
 
@@ -441,7 +441,7 @@ const ProductPromo = () => {
                 Seeds of Change Organic Quinoa, Brown, & Red Rice
               </div>
               <div>
-                <img src={require("../../assets/images/rating.png")} alt="" />
+                <img src={require("../../../assets/images/rating.png")} alt="" />
               </div>
               <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
               <div className="flex items-center max-[1444px]:flex-col max-[1444px]:items-start gap-2 mt-2 justify-between">
@@ -458,7 +458,7 @@ const ProductPromo = () => {
                     +{" "}
                     <span>
                       <img
-                        src={require("../../assets/images/cartGreen.png")}
+                        src={require("../../../assets/images/cartGreen.png")}
                         alt=""
                       />
                     </span>
@@ -470,7 +470,7 @@ const ProductPromo = () => {
           <div>
             <img
               className="object-cover w-full"
-              src={require("../../assets/images/promo1.png")}
+              src={require("../../../assets/images/promo1.png")}
               alt=""
             />
 
@@ -553,7 +553,7 @@ const ProductPromo = () => {
                 Seeds of Change Organic Quinoa, Brown, & Red Rice
               </div>
               <div>
-                <img src={require("../../assets/images/rating.png")} alt="" />
+                <img src={require("../../../assets/images/rating.png")} alt="" />
               </div>
               <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
               <div className="flex items-center max-[1444px]:flex-col max-[1444px]:items-start gap-2 mt-2 justify-between">
@@ -570,7 +570,7 @@ const ProductPromo = () => {
                     +{" "}
                     <span>
                       <img
-                        src={require("../../assets/images/cartGreen.png")}
+                        src={require("../../../assets/images/cartGreen.png")}
                         alt=""
                       />
                     </span>

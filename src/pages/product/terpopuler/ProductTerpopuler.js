@@ -1,6 +1,7 @@
 import { Tab, Tabs, ThemeProvider, createTheme } from "@mui/material";
-import { useStateContext } from "../../contexts/ContextProvider";
+import { useStateContext } from "../../../contexts/ContextProvider";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, text, ...other } = props;
@@ -242,20 +243,59 @@ const ProductTerpopuler = () => {
           <TabPanel value={value} index={0}>
             <div className="bg-white mt-5">
               <div className="grid grid-cols-5 gap-5 max-[1414px]:grid-cols-4 max-[1205px]:grid-cols-3 max-[754px]:grid-cols-2 max-[376px]:grid-cols-1 ">
+                <Link to="/product/jeruk-manis" className="flex flex-col border py-5 px-4 relative">
+                  <div className="absolute top-[20px] left-[4px] rounded-r-[30px] bg-[#3BB77E] w-[50px] h-[32px]">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">20%</div>
+                  </div>
+                  <div>
+                    <img
+                      src={require("../../../assets/images/mangga.png")}
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex max-[542px]:flex-col max-[542px]:items-start justify-between items-center">
+                    <div>
+                      <img
+                        src={require("../../../assets/images/rating.png")}
+                        alt=""
+                      />
+                    </div>
+                    <div className="text-[12px] text-[#7E7E7E]">1000000 gram</div>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="text-[12px] text-[#3BB77E]">Buah</div>
+                    <div className="text-[14px] text-[#3BB77E] font-bold h-[47px] overflow-hidden overflow-ellipsis ">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti assumenda veniam doloremque quos quod et aspernatur, esse accusamus iusto minima animi voluptatibus nihil facilis excepturi sit quaerat vero ducimus incidunt!
+                      lore
+                    </div>
+                    <div className="text-[12px] text-[#3BB77E] ">
+                      <span className="text-black">By</span> OxyFood
+                    </div>
+                  </div>
+                  <div className="flex flex-col mt-10">
+                    <div className="text-[10px] relative w-fit line-through">
+                      Rp. 28.0000
+                    </div>
+                    <div className="text-[16px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
+                      <div className="font-bold">Rp. 25.000.000</div>
+                      <div><input id="add-item" type="number" className="border border-[#3BB77E] w-[67px] h-[29px] focus:border-[#3BB77E]" /></div>
+                    </div>
+                  </div>
+                </Link>
                 <div className="flex flex-col border py-5 px-4 relative">
                   <div className="absolute top-[20px] left-[4px] rounded-r-[30px] bg-[#3BB77E] w-[50px] h-[32px]">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">20%</div>
                   </div>
                   <div>
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex max-[542px]:flex-col max-[542px]:items-start justify-between items-center">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
@@ -287,14 +327,14 @@ const ProductTerpopuler = () => {
                   </div>
                   <div>
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex max-[542px]:flex-col max-[542px]:items-start justify-between items-center">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
@@ -326,14 +366,14 @@ const ProductTerpopuler = () => {
                   </div>
                   <div>
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex max-[542px]:flex-col max-[542px]:items-start justify-between items-center">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>
@@ -365,53 +405,14 @@ const ProductTerpopuler = () => {
                   </div>
                   <div>
                     <img
-                      src={require("../../assets/images/mangga.png")}
+                      src={require("../../../assets/images/mangga.png")}
                       alt=""
                     />
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex max-[542px]:flex-col max-[542px]:items-start justify-between items-center">
                     <div>
                       <img
-                        src={require("../../assets/images/rating.png")}
-                        alt=""
-                      />
-                    </div>
-                    <div className="text-[12px] text-[#7E7E7E]">500 gram</div>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <div className="text-[12px] text-[#3BB77E]">Buah</div>
-                    <div className="text-[14px] text-[#3BB77E] font-bold h-[47px] overflow-hidden overflow-ellipsis ">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti assumenda veniam doloremque quos quod et aspernatur, esse accusamus iusto minima animi voluptatibus nihil facilis excepturi sit quaerat vero ducimus incidunt!
-                      lore
-                    </div>
-                    <div className="text-[12px] text-[#3BB77E] ">
-                      <span className="text-black">By</span> OxyFood
-                    </div>
-                  </div>
-                  <div className="flex flex-col mt-10">
-                    <div className="text-[10px] relative w-fit line-through">
-                      Rp. 28.0000
-                    </div>
-                    <div className="text-[16px] text-[#3BB77E] flex max-[1020px]:flex-col max-[1020px]:items-start max-[1020px]:gap-2 justify-between items-center">
-                      <div className="font-bold">Rp. 25.000.000</div>
-                      <div><input id="add-item" type="number" className="border border-[#3BB77E] w-[67px] h-[29px] focus:border-[#3BB77E]" /></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col border py-5 px-4 relative">
-                  <div className="absolute top-[20px] left-[4px] rounded-r-[30px] bg-[#3BB77E] w-[50px] h-[32px]">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">20%</div>
-                  </div>
-                  <div>
-                    <img
-                      src={require("../../assets/images/mangga.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <img
-                        src={require("../../assets/images/rating.png")}
+                        src={require("../../../assets/images/rating.png")}
                         alt=""
                       />
                     </div>

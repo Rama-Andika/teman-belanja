@@ -10,7 +10,6 @@ import Checkout from "./pages/Checkout";
 import ProductList from "./pages/ProductList";
 import ProductRekomendasiList from "./pages/ProductRekomendasiList";
 import ProductTerlarisList from "./pages/ProductTerlarisList";
-import ProductByKategory from "./pages/ProductByKategory";
 import ProductFlashSales from "./pages/ProductFlashSales";
 import AccountProfile from "./pages/AccountProfile";
 import AccountAddress from "./pages/AccountAddress";
@@ -18,6 +17,9 @@ import PesananSaya from "./pages/PesananSaya";
 import { Toaster } from "react-hot-toast";
 import ProductBySearch from "./pages/ProductBySearch";
 import { useStateContext } from "./contexts/ContextProvider";
+import CategoryShop from "./pages/category/CategoryShop";
+import ProductPage from "./pages/product/ProductPage";
+
 
 
 function App() {
@@ -64,8 +66,12 @@ function App() {
                 element={<ProductTerlarisList />}
               />
               <Route
-                path="/category/:kategori"
-                element={<ProductByKategory />}
+                path="/category"
+                element={<CategoryShop />}
+              />
+              <Route
+                path="/product/:slug"
+                element={<ProductPage />}
               />
               <Route path="/:search" element={<ProductBySearch />} />
               <Route path="/account/profile" element={<AccountProfile />} />

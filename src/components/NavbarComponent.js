@@ -49,10 +49,14 @@ const NavbarComponent = ({ children }) => {
       backgroundColor: "white",
       height: "10px",
       fontSize: "14px",
+      fontWeight: "700",
       borderRadius: "0.125rem",
       whiteSpace: "nowrap",
       border: state.isFocused ? "1px solid #BCE3C9" : "",
+      borderColor: "#BCE3C9",
+      borderRight: "0px",
       outline: state.isFocused && "1px solid #BCE3C9",
+    
       "&:hover": {
         border: "1px solid #BCE3C9",
       },
@@ -98,7 +102,7 @@ const NavbarComponent = ({ children }) => {
               </div>
             </div>
 
-            <div className="relative w-[500px] max-[1025px]:hidden min-[1300px]:w-[400px] min-[1400px]:w-[520px] min-[1484px]:w-[620px] ">
+            <div className="relative w-[500px] max-[1025px]:hidden min-[1300px]:w-[400px] min-[1400px]:w-[520px] min-[1484px]:w-[832px] ">
               <button
                 type="button"
                 onClick={onSubmitSearch}
@@ -110,7 +114,7 @@ const NavbarComponent = ({ children }) => {
                 <div className="w-[30%]">
                   <Select
                     components={{
-                      DropdownIndicator: () => null,
+                  
                       IndicatorSeparator: () => null,
                     }}
                     options={options}
@@ -120,10 +124,11 @@ const NavbarComponent = ({ children }) => {
                     required
                   />
                 </div>
+                <div className="w-[15px] h-[38px] border border-[#BCE3C9] border-x-0 flex items-center text-[#CACACA] ">|</div>
                 <div className="w-full">
                   <form onSubmit={onSubmitSearch} className="forma">
                     <input
-                      className="text-slate-900 ps-[20px] rounded-sm border border-slate-300 w-full h-[38px] text-sm focus:border-[#BCE3C9]"
+                      className="text-slate-900  rounded-sm border border-[#BCE3C9] w-full h-[38px] text-sm focus:border-[#BCE3C9] border-s-0"
                       type="text"
                       placeholder="Cari produk"
                       value={search}
@@ -463,7 +468,7 @@ const NavbarComponent = ({ children }) => {
               </div>
             )}
 
-            <div className="relative max-[573px]:hidden min-[574px]:block min-[1025px]:hidden w-full mt-3 shadow-lg">
+            <div className="relative max-[573px]:hidden min-[574px]:block min-[1025px]:hidden w-full mt-3">
               <button
                 type="button"
                 onClick={onSubmitSearch}

@@ -22,7 +22,7 @@ const CategoryComponent = () => {
             <div className="max-[252px]:text-[12px] min-[760px]:text-[32px] font-bold">
               Shop by Categories
             </div>
-            <div className="text-[10px] min-[760px]:text-[16px] font-[400] flex items-center gap-[17px]">
+            <Link to="/category" className="text-[10px] min-[760px]:text-[16px] font-[400] flex items-center gap-[17px]">
               <div>All Categories</div>
               <div>
                 <img
@@ -31,12 +31,12 @@ const CategoryComponent = () => {
                   alt=""
                 />
               </div>
-            </div>
+            </Link>
           </div>
           <div className="max-[428px]:block min-[429px]:hidden max-[252px]:text-[12px] min-[760px]:text-[32px] font-bold">
             Shop by Categories
           </div>
-          <div className="max-[428px]:flex min-[429px]:hidden text-[10px] min-[760px]:text-[16px] font-[400] flex items-center gap-[17px]">
+          <Link to="/category" className="max-[428px]:flex min-[429px]:hidden text-[10px] min-[760px]:text-[16px] font-[400] flex items-center gap-[17px]">
             <div>All Categories</div>
             <div>
               <img
@@ -45,7 +45,7 @@ const CategoryComponent = () => {
                 alt=""
               />
             </div>
-          </div>
+          </Link>
 
           <div className="hidden items-center gap-2 min-[429px]:flex">
             <div
@@ -117,6 +117,7 @@ const CategoryComponent = () => {
                   Makanan
                 </div>
               </div>
+              
               <div className="flex flex-col gap-[26px] pt-[41px] pb-[56px] px-[49px] shadow-sm justify-center items-center bg-[#F4F6FA]">
                 <div className="w-[80px]">
                   <img
@@ -288,7 +289,7 @@ const CategoryComponent = () => {
           <div className="rounded-sm bg-[#F3E8E8] h-[250px] relative">
             <div className="flex flex-col gap-5 absolute top-[50px] left-[28px] z-50">
               <div className="font-bold w-[250px] h-[100px] text-[24px] max-[1170px]:text-[18px] overflow-hidden overflow-ellipsis">
-                Minuman segar yang siap diantar ke rumah anda
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nemo ut, et illo iste doloremque quia culpa labore voluptatum tenetur possimus odit, similique voluptas ipsam deleniti, veniam id excepturi necessitatibus!
               </div>
               <div>
                 <button className="rounded-sm bg-[#3BB77E] py-1 px-3 text-white">

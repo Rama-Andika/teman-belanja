@@ -1,10 +1,11 @@
 import CategoryComponent from "../components/CategoryComponent";
 import Footer from "../components/Footer";
 import NavbarComponent from "../components/NavbarComponent";
-import ProductTerpopuler from "./terpopuler/ProductTerpopuler";
-import ProductTerlaris from "./terlaris/ProductTerlaris";
-import ProductPromo from "./promo/ProductPromo";
 import MergeSection from "./MergeSection";
+import ProductPromo from "./product/promo/ProductPromo";
+import ProductTerlaris from "./product/terlaris/ProductTerlaris";
+import ProductTerpopuler from "./product/terpopuler/ProductTerpopuler";
+
 
 const Home = () => {
   return (
